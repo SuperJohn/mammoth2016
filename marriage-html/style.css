@@ -156,7 +156,7 @@ ul.list li{ padding:0 0 10px 0; margin:0px; display:block;}
 ul.list li a{ display:block; padding:0 0 0 20px;color:#000000;}
 ul.list li a:hover{ color:#EF502C;}
 
-.pages_title{height:77px; width:902px; background:url(images/page_titles_bg.jpg) no-repeat center; clear:both; float:left; margin:0 0 0 38px; padding:0 0 0 20px; line-height:100px;}
+.pages_title{height:77px; width:902px;  clear:both; float:left; margin:0 0 0 38px; padding:0 0 0 20px; line-height:100px;}
 .pages_title h2{ font-size:25px;}
 .pages_title h2 span{ color:#ca7700;}
 
