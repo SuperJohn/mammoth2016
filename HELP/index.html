@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Marriage Html/CSS Template Documentation</title>
+	<link rel="stylesheet" href="assets/screen.css" type="text/css" media="screen, projection">
+</head>
+
+
+<body>
+<div class="container">
+
+
+         <div class="header">
+         
+            <div class="header_info">
+            	<h1>Marriage Html/CSS Template Documentation</h1>
+                
+                <div class="cteated_by">
+                        <strong>Created:</strong><i> Monday, May 07, 2012</i><br>
+                        <strong>By:</strong><i> Famous Themes</i><br>
+                </div>	
+            
+                <div class="thankyou">
+                Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/famousthemes">here</a>. Thanks so much!</p>
+                </div>
+            
+            </div>
+        
+         </div>
+<div class="center_content">
+
+<h2 id="toc">Table of Contents</h2>
+<ol class="enumar">
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#htmlStructure">HTML Structure</a>
+    <ol class="alpha">
+    <li><a href="#header">Menu, header and title</a></li>
+    <li><a href="#homeslider">Home Page slider</a></li>
+    <li><a href="#secpages">Secondary pages</a></li>
+    <li><a href="#portofolio">Photo Gallery page</a></li>
+    <li><a href="#contact">Contact page</a></li>
+    </ol>
+    </li>
+    	
+    <li><a href="#cssFiles">CSS Files and CSS Media Queries</a></li>
+    <li><a href="#javascript">JavaScript</a></li>
+
+    <li><a href="#psdFiles">PSD Files</a></li>
+    <li><a href="#credits">Sources and Credits</a></li>
+    </ol>
+
+<hr>
+
+<h3 id="intro">IMPORTANT</h3>
+<p><strong>Like any other Html/CSS Template, modifying this template   requires some basic Html and CSS knowledge. Some effects used here need   also some basic jQuery knowledge and javascript. To edit this template   you will need an html code editor, and the best way to do it is in   "code" view, not the "design view" option. The general purpose of an   Html/CSS template is to give you a starting layout in building your own   website. You can use this to create a simple static website with no   administration backend, or some people prefer the html templates to   integrate them in their own CMS (custom management system), with their   own administration tools.</strong></p>
+<p><br>
+</p>
+<h3>1) Introduction</h3>
+<p> &quot;Marriage&quot; is our second wedding related template after &quot;Our Wedding page&quot;. We have decided to create for this one a responsive layout to make it look better on all devices including mobiles. The template design is a minimal one with nice simple colors and custom web fonts to match the wedding event.  The layout can be easy to modify, just read the HELP file to better understand how to do it.</p>
+<p><strong>2) HTML Structure</strong> - <a href="#toc">top</a></p>
+<p>The template is using a responsive layout with a fluid grid strating from 1000 px width. </p>
+<p>The main HTML is included in &lt;div id=&quot;main_container&quot;&gt;</p>
+<p><strong>#main_container{margin:auto;width:1000px;padding:0; position:relative;}</strong></p>
+<p>Home page starts with <strong>&lt;div id=&quot;shadow_bg&quot;&gt;</strong> that is the shadow bg image behind the website main container</p>
+<p><strong>#shadow_bg{ width:100%; background:url(images/shadow_bg.png) no-repeat top center;}</strong></p>
+<p>&nbsp;</p>
+<p><img src="assets/images/structure.jpg" alt="" title=""></p>
+<p>&nbsp;</p>
+<h3 id="header">A. Menu, header and title</h3>
+<p>Menu is a javascript drop down menu with a general UL and LI styles. Javascript file included for the menu is</p>
+<p><strong>&lt;script type=&quot;text/javascript&quot; src=&quot;js/menu.js&quot;&gt;&lt;/script&gt;</strong></p>
+<p><strong> &lt;a class=&quot;show_menu&quot; href=&quot;#&quot;&gt;menu&lt;/a&gt;<br>
+  &lt;a class=&quot;hide_menu&quot; href=&quot;#&quot;&gt;close menu&lt;/a&gt;<br>
+  <br>
+  &lt;div class=&quot;menu&quot;&gt; <br>
+  &lt;ul id=&quot;main_menu&quot;&gt;<br>
+  &lt;li&gt;&lt;a class=&quot;selected&quot; href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;page.html&quot;&gt;Our wedding&lt;/a&gt;&lt;/li&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;fullwidth.html&quot;&gt;Drop down&lt;/a&gt;<br>
+  &lt;ul&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;fullwidth.html&quot;&gt;full width&lt;/a&gt;&lt;/li&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;gallery.html&quot;&gt;gallery layout&lt;/a&gt;&lt;/li&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;blog.html&quot;&gt;blog layout&lt;/a&gt;&lt;/li&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;contact form&lt;/a&gt;&lt;/li&gt;<br>
+  &lt;/ul&gt;<br>
+  &lt;/li&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;blog.html&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;gallery.html&quot;&gt;Photo Album&lt;/a&gt;&lt;/li&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;rsvp.html&quot;&gt;RSVP&lt;/a&gt;&lt;/li&gt;<br>
+  &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt; <br>
+  &lt;/ul&gt;<br>
+  &lt;/div&gt;</strong></p>
+<p>The 2 buttons are set to display none from the CSS file</p>
+<p><strong>&lt;a class=&quot;show_menu&quot; href=&quot;#&quot;&gt;menu&lt;/a&gt;<br>
+  &lt;a class=&quot;hide_menu&quot; href=&quot;#&quot;&gt;close menu&lt;/a&gt;</strong></p>
+<p>&nbsp;</p>
+<p><strong>.show_menu{ display:none;}<br>
+  .hide_menu{ display:none;}</strong></p>
+<p>&nbsp;</p>
+<p>They will available only for smaller resolutions. In CSS under Media Quesries code</p>
+<p><br>
+    <strong>@media screen and (max-width: 1000px) {</strong></p>
+<p><strong>.show_menu{ display:block; position:absolute; top:0px; right:20px; z-index:999;background-color:#ebc04f; padding:4px 13px 7px 13px;<br>
+  -moz-border-radius-bottomleft:8px;-webkit-border-bottom-left-radius:8px;-khtml-border-bottom-left-radius:8px;<br>
+  -moz-border-radius-bottomright:8px;-webkit-border-bottom-right-radius:8px;-khtml-border-bottom-right-radius:8px; color:#000000;<br>
+  }<br>
+  .hide_menu{ display:none; position:absolute; top:0px; right:20px; z-index:999;background-color:#ebc04f; padding:4px 13px 7px 13px;<br>
+  -moz-border-radius-bottomleft:8px;-webkit-border-bottom-left-radius:8px;-khtml-border-bottom-left-radius:8px;<br>
+  -moz-border-radius-bottomright:8px;-webkit-border-bottom-right-radius:8px;-khtml-border-bottom-right-radius:8px;color:#000000;<br>
+  }</strong></p>
+<p><strong>}</strong></p>
+<p></p>
+<p>Header structure is the same on all pages.</p>
+<p>In header we have the main title and the description as wedding date</p>
+<p><strong> &lt;div id=&quot;header&quot;&gt;<br>
+    <br>
+&lt;div class=&quot;title&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Michael &amp;amp; Sarah&lt;/a&gt;&lt;/div&gt;<br>
+&lt;div class=&quot;description&quot;&gt;&lt;span class=&quot;swirl_left&quot;&gt;&lt;span class=&quot;swirl_right&quot;&gt;25 june 2012&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;<br>
+<br>
+&lt;/div&gt;&lt;!-- End of Header--&gt;</strong></p>
+<p>We have used for this template 2 fonts from Google Web Fonts called &quot;Ovo&quot; and &quot;Great Vibes&quot;. The fonts are loaded in the header of HTML page.</p>
+<p><strong>&lt;link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css' /&gt;<br>
+&lt;link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css' /&gt;</strong></p>
+<p>And they are used in CSS accordenly</p>
+<p>h1, h2, h3, h4{<strong>font-family: 'Ovo', serif; </strong>color:#53462e;}</p>
+<p>&nbsp;</p>
+<h3 id="homeslider">B. Home page slider</h3>
+<p> <img src="assets/images/slider.jpg" alt="" title=""></p>
+<p>The structure of a slide is </p>
+<p><strong> &lt;li&gt;<br>
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/slider/slide1.jpg&quot; alt=&quot;&quot; title=&quot;&quot;/&gt;&lt;/a&gt;<br>
+&lt;div class=&quot;flex-caption&quot;&gt;<br>
+&lt;div class=&quot;caption_title_line&quot;&gt;&lt;h2&gt;Happiness is a way of travel&lt;/h2&gt;&lt;p&gt;&quot;There is no more lovely, friendly and charming relationship, communion or company than a good marriage.&quot;&lt;/p&gt;&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/li&gt;</strong></p>
+<p>Adding a new <strong>&lt;li&gt;</strong> will insert a new slide to you slider.</p>
+<p><strong>The image of the slide must be 900 x 400 px size</strong> and it will be resized automatically down to mobile resolution.</p>
+<p> <img src="assets/images/screenshot6.jpg" alt="" title=""></p>
+<h3 id="secpages">C. Secondary pages</h3>
+
+<p>We have provided with this template more html pages with different structures. There are pages with sidebar and pages with full width structures.</p>
+<p>For example the BLOG page layout<strong></strong> includes a LEFT CONTENT div and a SIDEBAR.</p>
+<p>Left content is a <strong>section 2/3</strong> and seidbar is a <strong>section 1/3</strong></p>
+<p> <img src="assets/images/structure2.jpg" alt="" title=""></p>
+<p>LEFT CONTENT includes latest posts, and text content for details pages.</p>
+<p><strong>.left23{ width:600px; float:left; padding:40px 0 0 40px;}</strong></p>
+<p>In sidebar we have included structures to build lists, small photo thumbs, testimonials, and any other text content.</p>
+<p><strong>/* Sidebar<br>
+  /*-----------------------------------------------------------------------------------*/<br>
+  .sidebar h2{ clear:both;}<br>
+  .sidebar ul{ padding:0 0 45px 0; margin:0px; list-style:none; display:block;clear:both; float:left;}<br>
+  .sidebar ul li{ padding:0 0 10px 0;display:block; border-bottom:1px #e8a900 dotted; margin:0 0 10px 0;}<br>
+  .sidebar ul li a{ background:url(images/bullet.gif) no-repeat left; display:block; padding:0 0 0 20px;color:#000000;}<br>
+  .sidebar ul li a:hover{ color:#e8a900;}</strong></p>
+<p>With this already built layout you can easely integrate a CMS into your website and transform it in a dinamic blog.</p>
+<p>There is also a <strong>full-width.html</strong> page witch contains a lot of other html structures to be used in pages.</p>
+<p>The layout can be divided in 1,2,3, or 4  sections using the classes</p>
+<p><strong>/* Layout<br>
+  /*-----------------------------------------------------------------------------------*/<br>
+  .left_full {padding:40px 40px 0 40px; float:left;}<br>
+  .left14{ width:200px; float:left; padding:40px 0 0 40px;}<br>
+  .left13{ width:280px; float:left; padding:40px 0 0 40px;}<br>
+  .left23{ width:600px; float:left; padding:40px 0 0 40px;}<br>
+  .left12{ width:440px; float:left; padding:40px 0 0 40px;}</strong></p>
+<p> <img src="assets/images/structure3.jpg" alt="" title=""></p>
+<p><strong>Adding Your Twitter feed</strong></p>
+<p>On home page and secondary pages sidebar you have the option to add your live twitter feed. On top javascript code you ca find the lines to edit your twitter username and text apearance details:</p>
+<p><img src="assets/images/twitter.jpg" alt="" title=""></p>
+<p><img src="assets/images/twitter-feed.jpg" alt="" title=""></p>
+<p><strong>Adding Your Flickr feed</strong></p>
+<p>On blog page in sidebar we have added a live flickr feed.</p>
+<p>Also on top javascript code of this page you can edit your flickr ID. To find your flickr ID use this website </p>
+<p>http://idgettr.com/</p>
+<p><img src="assets/images/flickr-feed.jpg" alt="" title=""></p>
+<p><img src="assets/images/flickr.jpg" alt="" title=""></p>
+<p>&nbsp;</p>
+<h4 id="portofolio">D. Photo Gallery page</h4>
+<p>We have included the posibility to add a filterable photo gallery page.</p>
+<p>On the version with filterable option the structure starts with the selection links</p>
+<p><strong> &lt;ul class=&quot;filter_portfolio&quot;&gt; <br>
+&lt;li class=&quot;segment-1 selected&quot;&gt;&lt;a href=&quot;#&quot; data-value=&quot;all&quot;&gt;Wiew all&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li class=&quot;segment-2&quot;&gt;&lt;a href=&quot;#&quot; data-value=&quot;wedding&quot;&gt;Wedding&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li class=&quot;segment-3&quot;&gt;&lt;a href=&quot;#&quot; data-value=&quot;ceremony&quot;&gt;Ceremony&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li class=&quot;segment-4&quot;&gt;&lt;a href=&quot;#&quot; data-value=&quot;honeymoon&quot;&gt;Honeymoon&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li class=&quot;segment-5&quot;&gt;&lt;a href=&quot;#&quot; data-value=&quot;groomsmens&quot;&gt;Groomsmens &amp;amp; Bridesmaids&lt;/a&gt;&lt;/li&gt;<br>
+&lt;/ul&gt; </strong></p>
+<p>folowed by each photo item</p>
+<p><strong> &lt;li class=&quot;gallery13 ceremony&quot; data-id=&quot;id-1&quot;&gt;<br>
+&lt;img src=&quot;images/gallery_frame.png&quot; alt=&quot;&quot; title=&quot;&quot; border=&quot;0&quot; class=&quot;frame&quot; /&gt;<br>
+&lt;img src=&quot;images/gallerythumb1.jpg&quot; alt=&quot;&quot; title=&quot;&quot; border=&quot;0&quot; class=&quot;thumb&quot; /&gt;<br>
+&lt;span class=&quot;portfolio_caption&quot;&gt;<br>
+&lt;a href=&quot;images/slider/slide1.jpg&quot; rel=&quot;prettyPhoto[gallery]&quot; title=&quot;Lorem ipsum sit amet&quot;&gt;&lt;img src=&quot;images/zoom.png&quot; alt=&quot;&quot; title=&quot;&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;<br>
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/like.png&quot; alt=&quot;&quot; title=&quot;&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;<br>
+&lt;/span&gt; <br>
+&lt;h3&gt;Happiness is a way of travel&lt;/h3&gt;<br>
+&lt;/li&gt;</strong></p>
+<p>As you can see each item has an <strong>data-value=&quot;ceremony&quot;</strong>attribute linked to a selectin link<strong>&lt;li class=&quot;gallery13 ceremony&quot; data-id=&quot;id-1&quot;&gt;</strong></p>
+<p><strong>When clicking the </strong><strong>ceremony</strong>selection link all<strong> ceremony</strong> photos will remain selected.</p>
+<p>On hover we have add prettyphoto effect for each photo. To add the big images url you will need to edit the line</p>
+<p><strong>&lt;a href=&quot;images/slider/slide1.jpg&quot; rel=&quot;prettyPhoto[gallery]&quot; title=&quot;Lorem ipsum sit amet&quot;&gt;</strong></p>
+<p>The big photo beeing <strong>&quot;slide1.jpg&quot;</strong> and the description text on popup window <strong>title=&quot;Lorem ipsum sit amet&quot;</strong></p>
+<p>There is also a heart icon on hover that can be used integrated with some social website that you like.</p>
+<p>&nbsp;</p>
+<p> <img src="assets/images/screenshot4.jpg" alt="" title=""></p>
+<p>&nbsp;</p>
+<hr>
+
+<h4 id="contact">E. Contact page</h4>
+<p>We have provided with this template 2 contact pages, one is with a simple html/css form and one with a php  functional contact form (contact.php).</p>
+<p>The php form is validating his inputs using<strong> jquery.validate.js</strong> file from JS theme folder.</p>
+<p>In header we have the code that validates the inputs and loads the js code:</p>
+<p><strong>&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.validate.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script type=&quot;text/javascript&quot;&gt;<br>
+$(document).ready(function() {<br>
+$(&quot;#form1&quot;).validate({<br>
+rules: {<br>
+name: &quot;required&quot;,// simple rule, converted to {required:true}<br>
+email: {// compound rule<br>
+required: true,<br>
+email: true<br>
+},<br>
+comment: {<br>
+required: true<br>
+}<br>
+},<br>
+messages: {<br>
+comment: &quot;Please enter a message.&quot;<br>
+}<br>
+});<br>
+});<br>
+&lt;/script&gt;</strong></p>
+<p>&nbsp;</p>
+<p>And the first lines of code are the ones that actually sends the email</p>
+<p><strong>&lt;?<br>
+  session_start();<br>
+  if(isset($_POST['submitted'])) {</strong></p>
+<p><strong>$name = trim($_POST['name']);<br>
+  $phone = trim($_POST['phone']);<br>
+  $email = trim($_POST['email']);<br>
+  $comment = trim($_POST['comment']);</strong></p>
+<p><strong>$emailTo = &quot;bbbooogggs@gmail.com&quot;;<br>
+  $subject = 'Contact message from '.$name; <br>
+  $body = &quot;Name: $name \n\n Email: $email \n\n Phone: $phone \n\n  Message: $comment&quot;;<br>
+  $headers = 'From: $name  &lt;'.$emailTo.'&gt;' . &quot;\r\n&quot; . 'Reply-To: ' . $email;<br>
+  @mail($emailTo, $subject, $body, $headers); <br>
+  $emailSent = true;</strong></p>
+<p><strong>}?&gt;</strong></p>
+<p>Adding the email where you want to receive your messages here</p>
+<p><strong>$emailTo = &quot;bbbooogggs@gmail.com&quot;;</strong></p>
+<p>&nbsp;</p>
+<h3 id="cssFiles"><strong>3) CSS Files</strong> - <a href="#toc">top</a></h3>
+
+<p>We are using 2 main CSS files for this template. All the CSS files are included in header of pages:</p>
+<p>Main CSS file is:</p>
+<p><strong>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;style.css&quot; /&gt;</strong></p>
+<p>PrettyPhoto CSS file:<strong><br>
+</strong></p>
+<p><strong>&lt;link rel=&quot;stylesheet&quot; href=&quot;prettyphoto/prettyPhoto.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; title=&quot;prettyPhoto main stylesheet&quot; charset=&quot;utf-8&quot; /&gt;</strong></p>
+<p> Here you can find all the styles use for popup images. We recommand not to edit this file unless you have good CSS skils.</p>
+<p>&nbsp;</p>
+<p>The main CSS file is very well organized, it start's with reset code and continues with all the general classes. The code is written inline for speed reasons. We know that your website will load faster with the CSS written like this.</p>
+<p>The code starts with general setup style and continues down to footer style and finally at the end CSS Media Queries code</p>
+<p><strong>/* General Setup<br>
+  /*-----------------------------------------------------------------------------------*/<br>
+  html{ background:url(images/bg-texture1.jpg) repeat #e6e6e6;}<br>
+  body{font-family:Arial, Helvetica, sans-serif;padding:0;font-size:12px;margin:0 auto;color:#48402c;background:url(images/top_bg.jpg) repeat-x top;}</strong></p>
+<p><strong>/* Footer<br>
+  /*-----------------------------------------------------------------------------------*/<br>
+  .footer{padding:25px 0 25px 0; margin:0;}</strong></p>
+<p><br>
+  <strong>/* Media Queries<br>
+  /*-----------------------------------------------------------------------------------*/</strong></p>
+<p><strong>@media screen and (max-width: 1000px) {<br>
+  body{background:none;}<br>
+  #main_container{margin:0 auto;width:98%;}<br>
+  #center_container{margin:0 auto;width:98%;}</strong></p>
+<p><strong>......</strong></p>
+<p><strong>.left_full, .left13, .left23, .left12, .left14{ width:90%; float:left; padding:5% 0 0 5%;}</strong></p>
+<p><strong>........</strong></p>
+<p><strong>}</strong></p>
+<p>We are using for this template also CSS Media Queries that allows the template to be viewed on all device resolutions inluding mobile.</p>
+<p> <img src="assets/images/screenshot6.jpg" alt="" title=""></p>
+<p>We have build in this template a smart fluid grid system. The system is using html classes named by their sizes. Like <strong>&lt;div class=&quot;left12&quot;&gt;</strong> witch is a half section of content. Or <strong>&lt;div class=&quot;left13&quot;&gt;</strong> witch is used on home page in the 3 sections below the slider.</p>
+<p>Starting from this smart sections you can easily build your own html strucure perfectly aligned and spaced.</p>
+<p><strong>/* Layout<br>
+  /*-----------------------------------------------------------------------------------*/<br>
+  .left_full {padding:40px 40px 0 40px; float:left;}<br>
+  .left14{ width:200px; float:left; padding:40px 0 0 40px;}<br>
+  .left13{ width:280px; float:left; padding:40px 0 0 40px;}<br>
+  .left23{ width:600px; float:left; padding:40px 0 0 40px;}<br>
+  .left12{ width:440px; float:left; padding:40px 0 0 40px;}</strong></p>
+<p><strong>If you would like to edit other specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</strong></p> 
+
+<hr>
+
+<h3 id="javascript"><strong>4) JavaScript</strong> - <a href="#toc">top</a></h3>
+
+
+<p>This template imports more Javascript files. All the files can be found in "JS" folder. The files are included betwen HEAD tags of the html content.</p>
+
+
+
+ <p><strong>On home page</strong> we are including:</p>
+ <p><strong>&lt;!-- jQuery --&gt;<br>
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js&quot;&gt;&lt;/script&gt;</strong><strong><br>
+&lt;!-- FlexSlider --&gt;<br>
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.flexslider-min.js&quot;&gt;&lt;/script&gt;</strong></p>
+ <p><strong>&lt;!-- Twitter Feed --&gt;<br>
+   &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.tweet.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</strong><strong><br>
+&lt;!-- DropDownMenu --&gt;<br>
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/menu.js&quot;&gt;&lt;/script&gt;</strong></p>
+ <p><strong><br>
+   &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;<br>
+   var $ = jQuery.noConflict();<br>
+$(window).load(function() {<br>
+$('.flexslider').flexslider({<br>
+animation: &quot;fade&quot;<br>
+});<br>
+<br>
+$(function() {<br>
+$('.show_menu').click(function(){<br>
+$('.menu').fadeIn();<br>
+$('.show_menu').fadeOut();<br>
+$('.hide_menu').fadeIn();<br>
+});<br>
+$('.hide_menu').click(function(){<br>
+$('.menu').fadeOut();<br>
+$('.show_menu').fadeIn();<br>
+$('.hide_menu').fadeOut();<br>
+});<br>
+});<br>
+  </strong></p>
+ <p><strong> });<br>
+     <br>
+   jQuery(function($){<br>
+   $(&quot;.tweet&quot;).tweet({<br>
+   join_text: &quot;auto&quot;,<br>
+   username: &quot;famousthemes&quot;,<br>
+   count: 1,<br>
+   auto_join_text_default: &quot;we said,&quot;,<br>
+   auto_join_text_ed: &quot;we&quot;,<br>
+   auto_join_text_ing: &quot;we were&quot;,<br>
+   auto_join_text_reply: &quot;we replied&quot;,<br>
+   auto_join_text_url: &quot;we were checking out&quot;,<br>
+   loading_text: &quot;loading tweets...&quot;<br>
+   });<br>
+   });<br>
+&lt;/script&gt;</strong></p>
+ <p>The scripts are used for <strong>drop down menu</strong>, <strong>flexi slider</strong>,<strong> twitter feed</strong></p>
+ <p>And in the bottom of tha page</p>
+ <strong>&lt;script type=&quot;text/javascript&quot;&gt;<br>
+ var main_menu=new main_menu.dd(&quot;main_menu&quot;);<br>
+ main_menu.init(&quot;main_menu&quot;,&quot;menuhover&quot;);<br>
+&lt;/script&gt; </strong>
+ <p>used to setup the main drop down menu.</p>
+ <p>Other javascript files are inclued on pages like:</p>
+ <p>1. Photo Gallery page is using some extra javascript files included like:</p>
+ <p><strong>&lt;!-- Sortable --&gt;<br>
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.quicksand.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/custom.quicksand.js&quot;&gt;&lt;/script&gt;</strong></p>
+ <p>for filterable effect</p>
+ <p>and </p>
+ <p><strong>&lt;script src=&quot;js/jquery.prettyPhoto.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</strong></p>
+ <p>for lightbox effect of the images.</p>
+ <p>&nbsp;</p>
+ <p><strong>We recomand NOT to edit this js files only if you have minimum JS knowledge</strong></p>
+    <p>&nbsp;</p>
+        <p>&nbsp;</p>
+ 
+
+<hr>
+
+<h3 id="psdFiles"><strong>5) PSD Files</strong> - <a href="#toc">top</a></h3>
+
+<p>We have included with this template the main page PSD file.</p>
+
+    <p>The PSD's is well organized on named group layers, if you want to modify something just go to the specific layer. There are hidden layers for some blog and gallery design elements.</p>
+    <p> <img src="assets/images/ps1.jpg" alt="" title=""></p>
+    <p>Keep in mind that you will have to save the final files from PSD to the same image format and size as they are now. Otherwise you will have to edit the specific html and CSS files. </p>
+    <p>For example the  background image used for some buttons is a png at 103x41px :</p>
+    <p> <img src="assets/images/more_about_bg.png" alt="" title=""></p>
+    <p>In CSS we have:</p>
+    <p><strong>a.more_about{ width:103px; height:41px; background:url(images/more_about_bg.png) no-repeat center; text-align:center; line-height:41px; float:right; display:block; margin:15px 0 0 0; color:#564926; text-shadow:1px 1px #f8d67f;}</strong></p>
+    <p>From the photoshop file you must export the button bg image at the same size and format in order not to modify the CSS file.</p>
+    <p> <img src="assets/images/ps2.jpg" alt="" title=""></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <hr>
+
+<h3 id="credits"><strong>6) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+
+
+<ul>
+    <li>jQuery code --- http://jquery.com/</li>
+    <li>Prettyphoto --- http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</li>
+    <li>FlexSlider --- http://www.woothemes.com/flexslider/</li>
+    <li>Filterable Portfolio --- http://razorjack.net/quicksand/</li>
+    <li>Twitter feed --- http://tweet.seaofclouds.com/</li>
+    <li>Flickr feed --- http://www.gethifi.com/blog/a-jquery-flickr-feed-plugin</li>
+    <li>Google Web Fonts</li>
+</ul>
+
+
+<hr>
+
+<p><a href="#toc">Go To Table of Contents</a></p>
+
+<hr class="space">
+</div>
+</div><!-- end div .container -->
+</body>
+</html>
