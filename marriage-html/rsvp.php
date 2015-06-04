@@ -17,7 +17,7 @@ $phone = trim($_POST['phone']);
 $email = trim($_POST['email']);
 $comment = trim($_POST['comment']);
 
-$emailTo = "bbbooogggs@gmail.com";
+$emailTo = "johnandsarah@mammoth2016.com";
 $subject = 'Contact message from '.$name;			
 $body = "Name: $name \n\n Email: $email \n\n Phone: $phone \n\n  Message: $comment \n\n Event will be attending at:\n\n $event1 \n $event2 \n $event3 \n $event4 \n\n Main meal selection:  $mainmeal \n\n Desert selection: $desert \n\n Menu notes: $menunotes \n\n Number of guests: $guests";
 $headers = 'From: '. $name .' <'.$email.'>' . "\r\n" . 'Reply-To: ' . $email;

@@ -9,14 +9,14 @@
 <title>John & Sarah's Wedding Website</title>
 <link rel="stylesheet" type="text/css" media="all" href="style.css" />
 <link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css' />
-<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 <!-- jQuery -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <!-- Twitter Feed -->
-<script type="text/javascript" src="js/twitter/jquery.tweet.js" charset="utf-8"></script>
-<!-- FlexSlider -->
-<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script src="js/twitter/jquery.tweet.js" charset="utf-8"></script>
+<!-- Flickr Feed -->
+<script src="js/jflickrfeed.min.js"></script>
 <!-- PrettyPhoto -->
 <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" src="js/custom.quicksand.js"></script>
@@ -25,9 +25,6 @@
 <script type="text/javascript" charset="utf-8">
 var $ = jQuery.noConflict();
   $(window).load(function() {
-    $('.flexslider').flexslider({
-          animation: "fade"
-    });
 	
 	$(function() {
 		$('.show_menu').click(function(){
@@ -58,6 +55,13 @@ var $ = jQuery.noConflict();
 	  auto_join_text_url: "we were checking out",
 	  loading_text: "loading tweets..."
 	});
+	$('#basicuse').jflickrfeed({
+		limit: 6,
+		qstrings: {
+			id: '31408169@N04'
+		},
+		itemTemplate: '<li><a href="{{image_b}}"><img src="{{image_s}}" alt="{{title}}" /></a></li>'
+	});
   });
 </script>
 <!--Google Analytics-->
@@ -81,8 +85,8 @@ var $ = jQuery.noConflict();
 	
     <div class="menu">                                                                   
         <ul id="main_menu">
-        	<li><a class="selected" href="index.html">Home</a></li>
-            <li><a href="page.html">Our wedding</a></li>
+        	<li><a  href="index.html">Home</a></li>
+            <li><a class="selected" href="page.html">Our wedding</a></li>
             <li><a href="destination.html">Travel & Lodging</a></li>
 			<li><a href="fullwidth.html">More Information</a>
             <ul>
@@ -107,60 +111,73 @@ var $ = jQuery.noConflict();
      <div class="description"><span class="swirl_left"><span class="swirl_right"> Mammoth Mountain | March 19, 2016</span></span></div>
      
   </div><!-- End of Header-->
-  
-   <div class="slider_container">
-		<div class="flexslider">
-	    <ul class="slides">
-	    	<li>
-	    		<a href="#"><img src="images/slider/slide1.jpg" alt="" title=""/></a>
-	    		<div class="flex-caption">
-                     <div class="caption_title_line"><h2>We couldn't be more excited</h2><p>Each and every one of you are so special to us and we cannot wait to see you there! So many fun things planned. Get ready!</p></div>
-                </div>
-	    	</li>
-	    	<li>
-	    		<a href="#"><img src="images/slider/slide2.jpg" alt="" title=""/></a>
-	    		<div class="flex-caption">
-                     <div class="caption_title_line"><h2>Get your skis ready</h2><p>That's right, it's a ski weekend in Mammoth. Historically, March has the greatest snowpack of the season, so God willing, there will be plent of snow :)</p></div>
-                </div>
-	    	</li>
-	    	<li>
-	    		<a href="#"><img src="images/slider/slide3.jpg" alt="" title=""/></a>
-	    		<div class="flex-caption">
-                     <div class="caption_title_line"><h2>Love is composed of a single soul</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p></div>
-                </div>
-	    	</li>
-	    	<li>
-	    		<a href="#"><img src="images/slider/slide4.jpg" alt="" title=""/></a>
-	    		<div class="flex-caption">
-                     <div class="caption_title_line"><h2>Your hands your hearts</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p></div>
-                </div>
-	    	</li>
-	    </ul>
-	  </div>
-   </div>
-   
-   
-   <div class="home_title">
-       <h2>Welcome to Our <span>'Love Party' Website!</span></h2>
-       <div class="socials">
-           <ul>
-           <li><a href="#"><img src="images/twitter.png" alt="" title="" border="0"/></a></li>
-           <li><a href="#"><img src="images/facebook.png" alt="" title="" border="0"/></a></li>
-           <li><a href="#"><img src="images/vimeo.png" alt="" title="" border="0"/></a></li>
-           <li><a href="#"><img src="images/google.png" alt="" title="" border="0"/></a></li>
-           </ul>
-       </div>
-       <div class="clear"></div>
-   </div>
-   
+     
+
+  <div class="pages_title">
+  <h2>About Our <span>'Love Party'</span></h2>
+  </div> 
    
    <div class="content">
+   
+   		<div class="left23">
+            <h2>You guys: This is going to be SO MUCH FUN</h2>
+            <p>
+            <a href="images/slider/slide1.jpg" rel="prettyPhoto[gallery]" title="Lorem ipsum sit amet"><img src="images/pic_left.jpg" alt="" title="" border="0" class="left_pic" /></a>
+            Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor <strong>exercitationem</strong> ut labore et dolore magna aliqua. Ut e  ut aliquid ex  ut aliquid ex  nim ad <strong><a href="#">ullam</a></strong> quis nostrud exercitation ullamco laboris nisi <strong><a href="#">consequatur</a></strong> ut aliquip ex ea commodo consequat. <br /><br />
+            Ut enim ad minima veniam, quis nostru <strong>exercitationem</strong> ullam corporis laboriosam, nisi ut aliquid ex ea commodi <strong><a href="#">consequatur</a></strong>
+            </p>
+            <a href="#" class="more">read more</a>
+            
+            <div class="clear"></div>
+            
+            <div class="contact_info_blocks">
+            
+            <div class="contact_info">
+            <h3>Wedding Video</h3>
+            <div class="icon"><a href="http://www.youtube.com/watch?v=EhY58d4XLl8" rel="prettyPhoto[gallery]" title="Popup Video"><img src="images/icon_video.png" alt="" title="" border="0"/></a></div><p>Dullamco nisi <strong><a href="#">consequatur</a></strong> ut aliquiut ex  ut s nostrud exercitation ullam ex  nim a</p>
+            </div>
+            <div class="contact_info">
+            <h3>Guests Reservation</h3>
+            <div class="icon"><a href="#"><img src="images/icon_clients.png" alt="" title="" border="0"/></a></div><p>Dullamco laboris nisi <strong><a href="#">consequatur</a></strong>  ex  ut s nostrud exercitation ullam ex  nim a</p>
+            </div>
 
-         
+            </div>  
+            
+        </div>
+        
+        <div class="left13">
+            <h2>Bridesmaids &amp; Groomsmen's</h2>
+            <div class="bgs">
+			<ul>
+                <li><a href="images/slider/slide1.jpg" rel="prettyPhoto[gallery]" title="Lorem ipsum sit amet"><img src="images/bridesmaids.jpg" class="bg_thumb" alt="" title="" /></a><a href="#">Sed do eiusmod tempor</a> <span>sit amet, consectetur adi aliquip ex ea commodo  pisi cing elit</span></li> 
+                <li><a href="images/slider/slide1.jpg" rel="prettyPhoto[gallery]" title="Lorem ipsum sit amet"><img src="images/groomsmen.jpg" class="bg_thumb" alt="" title="" /></a><a href="#">Labore et dolore </a> <span>sit amet, consectetur adi aliquip ex ea commodo  pisi cing elit</span></li>
+                <li><a href="images/slider/slide1.jpg" rel="prettyPhoto[gallery]" title="Lorem ipsum sit amet"><img src="images/bridesmaids.jpg" class="bg_thumb" alt="" title="" /></a><a href="#">Rliquip tempor</a> <span>sit amet, consectetur adi aliquip ex ea commodo  pisi cing elit</span></li> 
+                <li><a href="images/slider/slide1.jpg" rel="prettyPhoto[gallery]" title="Lorem ipsum sit amet"><img src="images/groomsmen.jpg" class="bg_thumb" alt="" title="" /></a><a href="#">Labore et dolore </a> <span>sit amet, consectetur adi aliquip ex ea commodo  pisi cing elit</span></li>
+                <li><a href="images/slider/slide1.jpg" rel="prettyPhoto[gallery]" title="Lorem ipsum sit amet"><img src="images/bridesmaids.jpg" class="bg_thumb" alt="" title="" /></a><a href="#">Rliquip tempor</a> <span>sit amet, consectetur adi aliquip ex ea commodo  pisi cing elit</span></li>
+            </ul>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+        
+        <div class="left_full">
+            <h2>Repondez s'il vous plait <span>RSVP</span></h2>
+            <p>
+             <a href="rsvp.html" class="left button">RSVP Now!</a>
+            Lorem ipsum dolor sit amet, consectetur adi pisi cing elit, sed do eiusmod tempor <strong>exercitationem</strong> ut labore et dolore magna aliqua. Ut enim ad <strong><a href="#">consequatur</a></strong> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+           
+            </p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="clear"></div>
+
    		<div class="left13 section_home">
         <h2>Wedding <span>Location</span></h2>
         <a href="#"><img src="images/image_13.jpg" alt="" title="" /></a>
-        <p>We're getting married at our favorite place on the whole planet, our special place,<strong>Mammoth Lakes, CA</strong>. Believe it or not, all guests will arrive via Gondola to our love party at an elevation of 9,500 ft<strong><a href="http://tinyurl.com/p4ppxon">  Our Venue: McCoy Station</a></strong>
+        <p>
+Ut enim ad minima veniam, quis nostru <strong>exercitationem</strong> ullam corporis laboriosam, nisi ut aliquid ex ea commodi <strong><a href="#">consequatur</a></strong>
         </p>
         <a href="#" class="section_more"><span class="swirl_left"><span class="swirl_right">read more</span></span></a>
         </div>
@@ -168,7 +185,8 @@ var $ = jQuery.noConflict();
    		<div class="left13 section_home">
         <h2>Honeymoon <span>Destination</span></h2>
         <a href="#"><img src="images/image_13_2.jpg" alt="" title="" /></a>
-        <p>We're going to spin a giant <strong>Honeymoon Mystery Wheel</strong> to determine where we'll be going after the big event <strong><a href="#">Our Honeymoon Page</a></strong>
+        <p>
+Ut enim ad minima veniam, quis nostru <strong>exercitationem</strong> ullam corporis laboriosam, nisi ut aliquid ex ea commodi <strong><a href="#">consequatur</a></strong>
         </p>
         <a href="#" class="section_more"><span class="swirl_left"><span class="swirl_right">read more</span></span></a>
         </div>
@@ -176,42 +194,12 @@ var $ = jQuery.noConflict();
    		<div class="left13 section_home">
         <h2>Girft <span>Registry</span></h2>
         <a href="#"><img src="images/image_13_3.jpg" alt="" title="" /></a>
-        <p><strong>WE LOVE PRESENTS!!!</strong> I want a pony, and a set of kayaks, and some fancy new shoes, and a new snowboard jacket, and fancy dishes, and an espresso machine... <strong><a href="http://www.rei.com">Our wedding registry</a></strong>
+        <p>
+Ut enim ad minima veniam, quis nostru <strong>exercitationem</strong> ullam corporis laboriosam, nisi ut aliquid ex ea commodi <strong><a href="#">consequatur</a></strong>
         </p>
         <a href="#" class="section_more"><span class="swirl_left"><span class="swirl_right">read more</span></span></a>
         </div>
-        
-                
-       <div class="name_divider">MS</div>         
-                
-   		<div class="left13 fdivider">
-        <h2>Latest <span>Tweets</span></h2>       
-        
-        <div class="tweet"></div>
-        <img src="images/icon_tweets.gif" alt="" title="" class="tweet_icon" />
-        </div>
-        
-   		<div class="left13 fdivider">
-        <h2>From the <span>Blog</span></h2>
-        <div class="widget_post">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a href="#"><strong>sed do eiusmod</strong></a> </p>
-        </div>
-        <div class="widget_post">
-        <p>Dolor sit  elit, <a href="#"><strong>do eiusmod</strong></a> consectetur </p>
-        </div>
-        <div class="widget_post">
-        <p>Consectetur adipisicing elit, <a href="#"><strong> eiusmod</strong></a> sed do adipisicing</p>
-        </div>
-        </div>
-        
-   		<div class="left13">
-        <h2>Say <span>Hello!</span></h2>
-        <p><strong>Email:</strong>  johnandsarah@mammoth2016.com<br />
-		<strong>Sarah's Phone:</strong> (858) 945 0273 <br />
-		<strong>John's Phone:</strong> (619) 581 3458 <br /><br />
-For travel and lodging questions, please first consult our destination page, which is full of information <a href="destination.html"><strong> Destination info</strong></a>  </p>
-        </div>
-       
+            
    </div>
    
    <div class="clear"></div> 
