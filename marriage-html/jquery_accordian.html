@@ -59,86 +59,14 @@ var $ = jQuery.noConflict();
    <script src="js/jquery-ui.js"></script>
  <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
  <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
-
-  
   <script>
   $(function() {
     $( "#accordion" ).accordion({
-           event: "click hoverintent"
-	  , heightStyle: "content" 
-	  , active: false
-		 , collapsible: true 
-
+      heightStyle: "content", 
+			  collapsible: true
     });
   });
- 
-  /*
-   * hoverIntent | Copyright 2011 Brian Cherne
-   * http://cherne.net/brian/resources/jquery.hoverIntent.html
-   * modified by the jQuery UI team
-   */
-  $.event.special.hoverintent = {
-    setup: function() {
-      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    teardown: function() {
-      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    handler: function( event ) {
-      var currentX, currentY, timeout,
-        args = arguments,
-        target = $( event.target ),
-        previousX = event.pageX,
-        previousY = event.pageY;
- 
-      function track( event ) {
-        currentX = event.pageX;
-        currentY = event.pageY;
-      };
- 
-      function clear() {
-        target
-          .unbind( "mousemove", track )
-          .unbind( "mouseout", clear );
-        clearTimeout( timeout );
-      }
- 
-      function handler() {
-        var prop,
-          orig = event;
- 
-        if ( ( Math.abs( previousX - currentX ) +
-            Math.abs( previousY - currentY ) ) < 7 ) {
-          clear();
- 
-          event = $.Event( "hoverintent" );
-          for ( prop in orig ) {
-            if ( !( prop in event ) ) {
-              event[ prop ] = orig[ prop ];
-            }
-          }
-          // Prevent accessing the original event since the new event
-          // is fired asynchronously and the old event is no longer
-          // usable (#6028)
-          delete event.originalEvent;
- 
-          target.trigger( event );
-        } else {
-          previousX = currentX;
-          previousY = currentY;
-          timeout = setTimeout( handler, 100 );
-        }
-      }
- 
-      timeout = setTimeout( handler, 100 );
-      target.bind({
-        mousemove: track,
-        mouseout: clear
-      });
-    }
-  };
   </script>
-  
   
 </head>
 <body>
@@ -153,9 +81,16 @@ var $ = jQuery.noConflict();
         	<li><a  href="index.html">Home</a></li>
             <li><a class="selected" href="wedding_info.html">Schedule of Events</a></li>
             <li><a href="destination.html">Travel & Lodging</a></li>
-			<li><a href="fullwidth.html">More Information</a></li>
+			<li><a href="fullwidth.html">More Information</a>
+            <ul>
+                <li><a href="fullwidth.html">Page Template</a></li>
+                <li><a href="gallery.html">gallery layout</a></li>
+                <li><a href="page.html">page layout</a></li>
+                <li><a href="contact.html">contact form</a></li>
+            </ul>
+            </li>
 			<li><a href="gallery.html">Photo Album</a></li>
-
+            <li><a href="rsvp.html">RSVP</a></li>
             <li><a href="contact.html">Contact</a></li> 
         </ul>
      </div>	
@@ -192,7 +127,6 @@ var $ = jQuery.noConflict();
 		<p><a href='#'><strong>12:00pm</strong></a>: Lunch on Mammoth Mountain at Canyon Lodge: Whether you’re snowboarding or not, we would love to see you for a mid-day bite to eat. Canyon Lodge is accessible via the free gondola from the Village. </p>
 		<br> 
 		</p>
-		
 		<h1>Friday Evening: <span>Welcome Dinner</span></h1>
         <a href="images/my_photos/mbc2.png" rel="prettyPhoto[gallery]" title="Mammoth Brewing Company"><img src="images/my_photos/mammoth-brewing-company-logo.jpg" alt="mammoth brewing company logo" title="mammoth brewing company logo" border="0" class="left_pic" /></a>
 		<a href="images/my_photos/mbc2.png" rel="prettyPhoto[gallery]" title="Lorem ipsum sit amet">
@@ -219,10 +153,8 @@ var $ = jQuery.noConflict();
 		<p><strong><font color=#FF0000>Dress Code:</font></strong> Black Tie Invited. Please be conscious of weather, and stay warm!</p>
 		<br>
 		<p> <a href='#'><strong>6:00 pm:</strong></a> Cocktail Hour: Move inside to Parallax, and let the celebrations begin!</p>
-		<br>
-		<a href="images/CA_honeydrops.jpg" rel="prettyPhoto[gallery]" title="The California Honeydrops"><img src="images/CA_honeydrops - sm.jpg" alt="The California Honeydrops" title="The California Honeydrops" border="0" class="left_pic" /></a>
-		
-		<p> <a href='#'><strong>7:00 pm:</strong></a> Reception: Sarah and John have quite the party planned for you. They’re excited to welcome one of their favorite bands – <strong><a href="http://www.cahoneydrops.com/" target="_blank">The California Honeydrops!</a></strong> Get in the grove, and check out their tunes before you get to the mountain. </p>
+		<br>		
+		<p> <a href='#'><strong>7:00 pm:</strong></a> Reception: Sarah and John have quite the party planned for you. They’re excited to welcome one of their favorite bands – The California Honeydrops! Get in the grove, and check out their tunes before you get to the mountain. </p>
 		<br>		
 		<p> <a href='#'><strong>11:30 pm:</strong></a> After Party at Parallax: You don’t have to go down the mountain yet! The DJ will be playing late, and we’ll dance the night away at 9,000ft.</p>
 	</div>
@@ -261,12 +193,12 @@ var $ = jQuery.noConflict();
        </div>
        <div class="footer_menu">
            <ul>
-           <li><a  href="index.html">Home</a></li>
-            <li><a class="selected" href="wedding_info.html">Our wedding</a></li>
-            <li><a href="fullwidth.html">More Information</a>
-            <li><a  href="destination.html">Travel & Lodging</a></li>
-			<li><a href="rsvp.html">RSVP</a></li>
-            <li><a href="contact.html">Contact</a></li> 
+           <li class="selected"><a href="index.html">Home</a></li>             
+           <li><a href="blog.html">Blog </a></li>             
+           <li><a href="gallery.html">Photo Album </a></li>             
+           <li><a href="rsvp.html">RSVP</a></li>               
+           <li><a href="contact.html">Contact</a></li> 
+           <li><a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
            </ul>
        </div>
        <div class="clear"></div>
