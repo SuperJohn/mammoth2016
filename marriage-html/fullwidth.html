@@ -133,7 +133,24 @@ var $ = jQuery.noConflict();
     }
   };
   </script>
-
+<!--Facebook Remarketing--> 
+<script>(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+_fbq.push(['addPixelId', '473521516162587']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=473521516162587&amp;ev=PixelInitialized" /></noscript>
+<!--End Facebook Remarketing--> 
 
 </head>
 <body>
@@ -171,9 +188,9 @@ var $ = jQuery.noConflict();
   <h1>Gift Registry <span>Zola, REI, Macy's, Honey-fund</span></h1>
   <div>
 		<a href="https://www.zola.com/registry/mammoth2016" target = "_blank" title="Zola Wedding Registry"><img src="images/my_photos/zola.jpg" alt="Zola Wedding Registry" title="Zola Wedding Registry" border="0" class="left_pic" /></a>
-		<p><a href='#'><strong>Zola</strong></a>: We've chosen to register with Zola, an easy-to-use registry site that enables us to register for the gifts we want, all in one place. If you'd like to give us a gift on Zola, click the logo below!</p>
+		<p><a href='#'><strong>Zola</strong></a>: We've chosen to register with Zola, an easy-to-use registry site that enables us to register for the gifts we want, all in one place. Use <a href = "https://www.zola.com/registry/mammoth2016" target="_blank">this link</a> to visit our Zola gift registry</p>
 		<br>
-		<p> <a href='#'><strong>Macy's</strong></a>: We're also registered at Macy's. Find our picks here! </p> 
+		<p> <a href='#'><strong>Macy's</strong></a>: We're also registered at Macy's. <a href = "http://www.macys.com/registry/wedding/guest/?registryId=2266517" target = "_blank">Here's a link to our Macy's registry.</a> </p> 
 		<br>
 		<p> <a href='#'><strong>REI</strong></a>: We love the outdoors! </p>
 		<p> <a href='#'><strong>Honey Fund</strong></a>: We love the outdoors! </p>
@@ -235,13 +252,14 @@ var $ = jQuery.noConflict();
        </div>
        <div class="footer_menu">
            <ul>
-           <li><a  href="index.html">Home</a></li>
-            <li><a href="wedding_info.html">Our wedding</a></li>
-            <li><a class="selected" href="fullwidth.html">More Information</a>
-            <li><a  href="destination.html">Travel & Lodging</a></li>
-			<li><a href="rsvp.html">RSVP</a></li>
+         	<li><a href="index.html">Home</a></li>
+            <li><a href="wedding_info.html">Schedule of Events</a></li>
+            <li><a href="destination.html">Travel & Lodging</a></li>
+			<li><a class="selected" href="fullwidth.html">More Information</a></li>
+			<li><a href="gallery.html">Photo Album</a></li>
             <li><a href="contact.html">Contact</a></li> 
-           </ul>
+			<li><a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
+			</ul>
        </div>
        <div class="clear"></div>
        </div>

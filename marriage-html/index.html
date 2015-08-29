@@ -71,6 +71,25 @@ var $ = jQuery.noConflict();
   ga('send', 'pageview');
 
 </script>
+
+<!--Facebook Remarketing--> 
+<script>(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+_fbq.push(['addPixelId', '473521516162587']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=473521516162587&amp;ev=PixelInitialized" /></noscript>
+<!--End Facebook Remarketing--> 
 </head>
 <body>
 <div id="shadow_bg">
@@ -86,7 +105,6 @@ var $ = jQuery.noConflict();
             <li><a href="destination.html">Travel & Lodging</a></li>
 			<li><a href="fullwidth.html">More Information</a></li>
 			<li><a href="gallery.html">Photo Album</a></li>
-
             <li><a href="contact.html">Contact</a></li> 
         </ul>
      </div>
@@ -177,12 +195,13 @@ var $ = jQuery.noConflict();
        </div>
        <div class="footer_menu">
            <ul>
-           <li><a  class="selected" href="index.html">Home</a></li>
-            <li><a  href="wedding_info.html">Our wedding</a></li>
-            <li><a href="fullwidth.html">More Information</a>
-            <li><a  href="destination.html">Travel & Lodging</a></li>
-			<li><a href="rsvp.html">RSVP</a></li>
+        	<li><a class="selected" href="index.html">Home</a></li>
+            <li><a href="wedding_info.html">Schedule of Events</a></li>
+            <li><a href="destination.html">Travel & Lodging</a></li>
+			<li><a href="fullwidth.html">More Information</a></li>
+			<li><a href="gallery.html">Photo Album</a></li>
             <li><a href="contact.html">Contact</a></li> 
+			           <li><a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
            </ul>
        </div>
        <div class="clear"></div>

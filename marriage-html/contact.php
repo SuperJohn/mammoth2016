@@ -7,8 +7,8 @@ $phone = trim($_POST['phone']);
 $email = trim($_POST['email']);
 $comment = trim($_POST['comment']);
 
-$emailTo = "bbbooogggs@gmail.com";
-$subject = 'Contact message from '.$name;			
+$emailTo = "johnkirkhoughton1@gmail.com";
+$subject = 'Wedding RSVP from '.$name;			
 $body = "Name: $name \n\n Email: $email \n\n Phone: $phone \n\n  Message: $comment";
 $headers = 'From: '. $name .' <'.$email.'>' . "\r\n" . 'Reply-To: ' . $email;
 @mail($emailTo, $subject, $body, $headers);						
