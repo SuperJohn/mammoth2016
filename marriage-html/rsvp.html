@@ -3,9 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
-<meta name="author" content="FamousThemes" />
-<meta name="description" content="Get in the spotlight" />
-<meta name="keywords" content="premium css templates, premium wordpress themes, famous themes, themeforest" />
 <title>John & Sarah's Wedding Website</title>
 <link rel="stylesheet" type="text/css" media="all" href="style.css" />
 <link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
@@ -30,7 +27,7 @@ var $ = jQuery.noConflict();
     $('.flexslider').flexslider({
           animation: "fade"
     });
-	
+
 	$(function() {
 		$('.show_menu').click(function(){
 				$('.menu').fadeIn();
@@ -43,10 +40,10 @@ var $ = jQuery.noConflict();
 				$('.hide_menu').fadeOut();
 		});
 	});
-	
+
 
   });
-  
+
   jQuery(function($){
 	$(".tweet").tweet({
 	  modpath: 'js/twitter/',
@@ -87,8 +84,8 @@ var $ = jQuery.noConflict();
 
 	<a class="show_menu" href="#">menu</a>
     <a class="hide_menu" href="#">close menu</a>
-	
-<div class="menu">                                                                   
+
+<div class="menu">
         <ul id="main_menu">
         	<li><a  href="index.html">Home</a></li>
             <li><a href="wedding_info.html">Schedule of Events</a></li>
@@ -96,168 +93,133 @@ var $ = jQuery.noConflict();
 			<li><a href="fullwidth.html">More Information</a></li>
 			<li><a href="gallery.html">Photo Album</a></li>
             <li><a class="selected" href="rsvp.html">RSVP</a></li>
-            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-     </div>	
+     </div>
 
 <div id="center_container">
 
   <div id="header">
-     
+
      <div class="title"><a href="index.html">RSVP</a></div>
      <div class="description"><span class="swirl_left"><span class="swirl_right"> Mammoth Mountain | March 19, 2016</span></span></div>
-     
+
   </div><!-- End of Header-->
-   
+
    <div class="content">
         <div class="left23">
-    
+
 			<div class="form_content">
-            
-            
-            
-                <form id="form1" method="post" action="http://45.79.70.90:8000/rsvp/add/">
- 			<h3 class="form_subtitle">Select Event</h3>
-            	<div class="form_rsvp">
+<!-- NEW FORM -->
+
+            <form id="form1" method="post" action="http://52.3.242.61:8000/rsvp/add/">
+ 			<h3 class="form_subtitle">Will you be attending our Wondrous Winter Wedding?</h3>
+            	<div class="form_row_rsvp"> <div class="form_row"><label>Your Name:</label>
+                        <input type="text" tabindex="1" class="form_input" name="name"/></div>
                     <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="checkbox" class="form_checkbox"  name='event1'  /></div> <span class="checkbox_value">Welcome Party (location TBD)</span> <span class="date_value"> Thursday PM</span> 
+                    <div class="checkbox_container"><input type="radio" tabindex="2" class="form_radio" name="attend"
+                            /></div>
+                        <span class="checkbox_value">Delightfully Accept</span>
                     </div>
                     <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="checkbox" class="form_checkbox"  name='event1'  /></div> <span class="checkbox_value">Group Skiing / lunch at Mammoth Mountain</span>  <span class="date_value"> Friday AM</span>
+                    <div class="checkbox_container"><input type="radio" tabindex="3" class="form_radio"
+                                                           name="no_attend" /></div>
+                        <span class="checkbox_value">Declines with Regrets</span>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <label>your email:</label>
+                    <input type="text" tabindex="4" class="form_input" name="email" />
+                    </div>
+                <div class="form_row"><label>Guest Number:</label>
+                        <input type="text" tabindex="5" class="form_input" name="guest_number"/></div>
+
+                <div
+                        class="form_row"><label>Food Allergies?</label><input type="text" tabindex="6"
+                                                                                          class="form_input"
+                                                                              name="food_allergies"/></div>
+                <br>
+                <h3 class="form_subtitle">Please select any additional events you plan to attend while in Mammoth.
+                    <br><br>See our <a href="wedding_info.html" target="_blank">Schedules Page</a>  for more info.</h3>
+            	<div class="form_rsvp">
+                    <div class="form_row_rsvp">
+                    <div
+                            class="checkbox_container"><input type="checkbox" tabindex="7" class="form_checkbox"
+                                                              name='event1'/></div> <span
+                            class="checkbox_value">St Patrick's Day Happy Hour</span> <span
+                            class="date_value"> Thursday PM</span>
+                    </div>
+                    <div class="form_row_rsvp">
+                    <div class="checkbox_container"><input type="checkbox" tabindex="8" class="form_checkbox"
+                                                           name='event1'  /></div> <span class="checkbox_value">Group Skiing / lunch at Mammoth Mountain</span>  <span class="date_value"> Friday AM</span>
 					</div>
 					<div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="checkbox" class="form_checkbox"  name='event3' /></div> <span class="checkbox_value">Rehearsal Dinner at Mammoth Brewing Co</span>  <span class="date_value"> Friday PM</span>
+                    <div
+                            class="checkbox_container"><input type="checkbox" tabindex="9" class="form_checkbox"
+                                                              name='event3' /></div> <span class="checkbox_value">Rehearsal Dinner at Mammoth Brewing Co</span>  <span class="date_value"> Friday PM</span>
                     </div>
 					<div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="checkbox" class="form_checkbox"  name='event4' /></div> <span class="checkbox_value">Ceremony & Reception at Mammoth Mountain</span>  <span class="date_value"> Saturday PM</span>
+                    <div
+                            class="checkbox_container"><input type="checkbox" tabindex="10" class="form_checkbox"
+                                                              name='event4' /></div> <span class="checkbox_value">Ceremony & Reception at Mammoth Mountain</span>  <span class="date_value"> Saturday PM</span>
                     </div>
                     <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="checkbox" class="form_checkbox"  name='event5' /></div> <span class="checkbox_value">Good-bye Breakfast at the Sullivan's</span> <span class="date_value"> Sunday AM</span> 
+                    <div class="checkbox_container"><input type="checkbox" class="form_checkbox"  name='event5' /></div> <span class="checkbox_value">Good-bye Breakfast at the Sullivan's</span> <span class="date_value"> Sunday AM</span>
                     </div>
                 </div>
-                
- 			<h3 class="form_subtitle">Will you be attending at the event selected</h3>
-            	<div class="form_rsvp">
-                    <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="radio" class="form_radio" name="attend" /></div> <span class="checkbox_value">Yes, I (we) will be attending.</span>  
-                    </div>
-                    <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="radio" class="form_radio" name="no_attend" /></div> <span class="checkbox_value">No, I (we) will not be attending.</span>  
-                    </div>
-                    <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="radio" class="form_radio" name="notsure_attend" /></div> <span class="checkbox_value">Not Sure</span>  
-                    </div>
-                </div>
-           <h3 class="form_subtitle">Please select a meal choice</h3>
-          		<div class="form">
-                    <div class="form_row">
-                    <label>Main</label>
-                    <div class="select_container">
-                    <select class="form_select" name='main_food'>
-                    <option>Pizza</option>
-                    <option>Cake</option>
-                    <option>Wine Only</option>
-                    <option>McNuggets & Fries</option>
-                    </select>
-                    </div>
-                    </div>
-                    <div class="form_row">
-                    <label>Dessert</label>
-                    <div class="select_container">
-                    <select class="form_select" name='dessert_food'>
-                    <option>Whiskey</option>
-                    <option>Shots!</option>
-                    <option>Pumpkin Cheesecake</option>
-                    <option>Twix with ice cream on top</option>
-                    </select>
-                    </div>
-                    </div>
-                    <div class="form_row">
-                    <label>menu notes:</label>
-                    <textarea class="form_textarea" name="menu_notes"></textarea>
-                    </div>
-          		</div>
-                
-           <h3 class="form_subtitle">Guest Details</h3>
-          		<div class="form">
-                    <div class="form_row">
-                    <label>nr of guests:</label>
-                    <div class="select_container">
-                    <select class="form_select" name='guest_number'>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    </select>
-                    </div>
-                    </div>
-                    <div class="form_row">
-                    <label>your name:</label>
-                    <input type="text" class="form_input" name="name" />
-                    </div>
-                    <div class="form_row">
-                    <label>your email:</label>
-                    <input type="text" class="form_input" name="email" />
-                    </div>
-                    <div class="form_row">
-                    <label>phone:</label>
-                    <input type="text" class="form_input" name="phone" />
-                    </div>
-                    <div class="form_row">
-                    <label>comments:</label>
+                <div class="form_row">
+                <label>Leave a note for the Bride & Groom:</label>
                     <textarea class="form_textarea" name="comment"></textarea>
                     </div>
-                    <div class="form_row">
-                    <input type="submit" class="form_submit_contact" value="Add RSVP" />
-                    </div> 
-          		</div>
-                
-                </form>
-            </div>
-             
-        </div>
-		
-   		<div class="left13 sidebar">
-        
-			<h2>Wedding Location</h2>
-<div class="gmap"><iframe width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=houston+usa&amp;hl=ro&amp;sll=37.0625,-95.677068&amp;sspn=53.961216,114.169922&amp;hnear=Houston,+Harris,+Texas&amp;t=m&amp;z=5&output=embed"></iframe></div>
 
- 
+
+                <div class="form_row">
+                    <input type="submit" class="form_submit_contact" value="Add RSVP" />
+                    </div>
+            </form>
+
+<!-- END NEW FORM -->
+            </div>
+
+        </div>
+
+   		<div class="left13 sidebar">
+
+			<h2>Wedding Location</h2>
+            <div class="gmap"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=zTWEkE5bokz0.kdLYPRSXi7PM"
+                                      width="100%" height="300"></iframe></div>
+
+            <div class = gmap> <iframe
+  width="100%"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfYgeLqLsFIP3w8FYnqxC55awsOAQwqLU
+    &q=McCoy+Station,Mammoth+Lakes+CA" allowfullscreen>
+</iframe></div>
+
             <h2>Some cool Mammoth Links</h2>
 			<ul>
-                <li><a href="#">See the scenic gondola</a></li> 
+                <li><a href="#">See the scenic gondola</a></li>
                 <li><a href="#">Best Hikes around Mammoth</a></li>
                 <li><a href="#">Mammoth Restaurant Guide</a></li>
                 <li><a href="#">Video: Your Guide to Mammoth Lakes</a></li>
                 <li><a href="#">Map of Mammoth Area</a></li>
             </ul>
-            
-            <h2>Latest tweets</h2>
-            <div class="tweet"></div>
-            <img src="images/icon_tweets.gif" alt="" title="" class="tweet_icon" />
-            
-            <h2>Flickr photos</h2>
-            <div class="flickr_photos">
-            <ul id="basicuse" class="thumbs"></ul>
-            </div>
-            
-            
-             
+
         </div>
-		
+
         <div class="clear"></div>
-       
+
    </div>
-   
-   <div class="clear"></div> 
-   
+
+   <div class="clear"></div>
+
 </div>
 
 </div>
 </div>
 
-   
+
    <div class="footer">
        <div class="footer_content">
        <div class="footer_text">
@@ -266,17 +228,17 @@ var $ = jQuery.noConflict();
        </div>
        <div class="footer_menu">
            <ul>
-           <li class="selected"><a href="index.html">Home</a></li>             
-           <li><a href="blog.html">Blog </a></li>             
-           <li><a href="gallery.html">Photo Album </a></li>             
-           <li><a href="rsvp.html">RSVP</a></li>               
-           <li><a href="contact.html">Contact</a></li> 
+           <li class="selected"><a href="index.html">Home</a></li>
+           <li><a href="blog.html">Blog </a></li>
+           <li><a href="gallery.html">Photo Album </a></li>
+           <li><a href="rsvp.html">RSVP</a></li>
+           <li><a href="contact.html">Contact</a></li>
            <li><a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
            </ul>
        </div>
        <div class="clear"></div>
        </div>
-       
+
 	   <!-- Google Code for Remarketing Tag -->
 			<!--------------------------------------------------
 			Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
@@ -296,7 +258,7 @@ var $ = jQuery.noConflict();
 			</div>
 			</noscript>
 				<!--[ End Google Adwords ReMarketing Tags]-->
-	   
+
    </div>
 
 <script type="text/javascript">
