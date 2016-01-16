@@ -88,7 +88,7 @@ var $ = jQuery.noConflict();
 <div class="menu">
         <ul id="main_menu">
         	<li><a  href="index.html">Home</a></li>
-            <li><a href="schedule.html">Schedule of Events</a></li>
+            <li><a href="wedding_info.html">Schedule of Events</a></li>
             <li><a href="destination.html">Travel & Lodging</a></li>
 			<li><a href="fullwidth.html">More Information</a></li>
 			<li><a href="gallery.html">Photo Album</a></li>
@@ -112,9 +112,10 @@ var $ = jQuery.noConflict();
 			<div class="form_content">
 <!-- NEW FORM -->
 
-            <form id="form1" method="post" action="http://mammoth2016.com:8000/rsvp/add/">
+            <form id="form1" method="post" action="http://52.3.242.61:8000/rsvp/add/">
  			<h3 class="form_subtitle">Will you be attending our Wondrous Winter Wedding?</h3>
-
+            	<div class="form_row_rsvp"> <div class="form_row"><label>Your Name:</label>
+                        <input type="text" tabindex="1" class="form_input" name="name"/></div>
                     <div class="form_row_rsvp">
                     <div class="checkbox_container"><input type="radio" tabindex="2" class="form_radio" name="attend"
                             /></div>
@@ -125,40 +126,21 @@ var $ = jQuery.noConflict();
                                                            name="no_attend" /></div>
                         <span class="checkbox_value">Declines with Regrets</span>
                     </div>
-
-                <div class="form_row"><label>Your Name:</label>
-                        <input type="text" tabindex="1" class="form_input" name="name"/></div>
-
+                </div>
                 <div class="form_row">
-                    <label>Guest Names:</label>
-                    <input type="text" tabindex="4" class="form_input" name="guest_names" />
-                </div>
-
-                <h3 class="form_subtitle">Please choose your entree:</h3>
-
-                <div class="form_row_rsvp">
-                    <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="radio" tabindex="2" class="form_radio" name="entree1"
-                            /></div>
-                        <span class="checkbox_value">Filet Mignon</span>
+                    <label>your email:</label>
+                    <input type="text" tabindex="4" class="form_input" name="email" />
                     </div>
-                    <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="radio" tabindex="3" class="form_radio"
-                                                           name="entree2" /></div>
-                        <span class="checkbox_value">Salmon</span>
-                    </div>
-                    <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="radio" tabindex="3" class="form_radio"
-                                                           name="entree3" /></div>
-                        <span class="checkbox_value">Vegetarian Curry</span>
-                    </div>
-                </div>
+                <div class="form_row"><label>Guest Number:</label>
+                        <input type="text" tabindex="5" class="form_input" name="guest_number"/></div>
 
-                <div class="form_row"><label>Allergies?</label>
-                        <input type="text" tabindex="5" class="form_input" name="allergies"/></div>
+                <div
+                        class="form_row"><label>Food Allergies?</label><input type="text" tabindex="6"
+                                                                                          class="form_input"
+                                                                              name="food_allergies"/></div>
                 <br>
                 <h3 class="form_subtitle">Please select any additional events you plan to attend while in Mammoth.
-                    <br><br>See our <a href="schedule.html" target="_blank">Schedules Page</a>  for more info.</h3>
+                    <br><br>See our <a href="wedding_info.html" target="_blank">Schedules Page</a>  for more info.</h3>
             	<div class="form_rsvp">
                     <div class="form_row_rsvp">
                     <div
@@ -169,14 +151,12 @@ var $ = jQuery.noConflict();
                     </div>
                     <div class="form_row_rsvp">
                     <div class="checkbox_container"><input type="checkbox" tabindex="8" class="form_checkbox"
-                                                           name='event2'  /></div> <span class="checkbox_value">Group Skiing / lunch at Mammoth Mountain</span>  <span class="date_value"> Friday AM</span>
+                                                           name='event1'  /></div> <span class="checkbox_value">Group Skiing / lunch at Mammoth Mountain</span>  <span class="date_value"> Friday AM</span>
 					</div>
 					<div class="form_row_rsvp">
                     <div
                             class="checkbox_container"><input type="checkbox" tabindex="9" class="form_checkbox"
-                                                              name='event3' /></div> <span
-                            class="checkbox_value">Welcome Dinner at Mammoth Brewing Co</span>  <span
-                            class="date_value"> Friday PM</span>
+                                                              name='event3' /></div> <span class="checkbox_value">Rehearsal Dinner at Mammoth Brewing Co</span>  <span class="date_value"> Friday PM</span>
                     </div>
 					<div class="form_row_rsvp">
                     <div
@@ -184,8 +164,7 @@ var $ = jQuery.noConflict();
                                                               name='event4' /></div> <span class="checkbox_value">Ceremony & Reception at Mammoth Mountain</span>  <span class="date_value"> Saturday PM</span>
                     </div>
                     <div class="form_row_rsvp">
-                    <div
-                            class="checkbox_container"><input type="checkbox" class="form_checkbox"  name='event5' /></div> <span class="checkbox_value">Farewell Brunch at the Sullivan's</span> <span class="date_value"> Sunday AM</span>
+                    <div class="checkbox_container"><input type="checkbox" class="form_checkbox"  name='event5' /></div> <span class="checkbox_value">Good-bye Breakfast at the Sullivan's</span> <span class="date_value"> Sunday AM</span>
                     </div>
                 </div>
                 <div class="form_row">
@@ -288,4 +267,3 @@ main_menu.init("main_menu","menuhover");
 </script>
 </body>
 </html>
-

@@ -112,7 +112,7 @@ var $ = jQuery.noConflict();
 			<div class="form_content">
 <!-- NEW FORM -->
 
-            <form id="form1" method="post" action="http://mammoth2016.com:8000/rsvp/add/">
+            <form id="form1" method="post" action="http://52.3.242.61:8000/rsvp/add/">
  			<h3 class="form_subtitle">Will you be attending our Wondrous Winter Wedding?</h3>
 
                     <div class="form_row_rsvp">
@@ -131,25 +131,25 @@ var $ = jQuery.noConflict();
 
                 <div class="form_row">
                     <label>Guest Names:</label>
-                    <input type="text" tabindex="4" class="form_input" name="guest_names" />
+                    <input type="text" tabindex="4" class="form_input" name="email" />
                 </div>
 
                 <h3 class="form_subtitle">Please choose your entree:</h3>
 
                 <div class="form_row_rsvp">
                     <div class="form_row_rsvp">
-                    <div class="checkbox_container"><input type="radio" tabindex="2" class="form_radio" name="entree1"
+                    <div class="checkbox_container"><input type="radio" tabindex="2" class="form_radio" name="entree"
                             /></div>
                         <span class="checkbox_value">Filet Mignon</span>
                     </div>
                     <div class="form_row_rsvp">
                     <div class="checkbox_container"><input type="radio" tabindex="3" class="form_radio"
-                                                           name="entree2" /></div>
+                                                           name="no_attend" /></div>
                         <span class="checkbox_value">Salmon</span>
                     </div>
                     <div class="form_row_rsvp">
                     <div class="checkbox_container"><input type="radio" tabindex="3" class="form_radio"
-                                                           name="entree3" /></div>
+                                                           name="no_attend" /></div>
                         <span class="checkbox_value">Vegetarian Curry</span>
                     </div>
                 </div>
@@ -169,7 +169,7 @@ var $ = jQuery.noConflict();
                     </div>
                     <div class="form_row_rsvp">
                     <div class="checkbox_container"><input type="checkbox" tabindex="8" class="form_checkbox"
-                                                           name='event2'  /></div> <span class="checkbox_value">Group Skiing / lunch at Mammoth Mountain</span>  <span class="date_value"> Friday AM</span>
+                                                           name='event1'  /></div> <span class="checkbox_value">Group Skiing / lunch at Mammoth Mountain</span>  <span class="date_value"> Friday AM</span>
 					</div>
 					<div class="form_row_rsvp">
                     <div
