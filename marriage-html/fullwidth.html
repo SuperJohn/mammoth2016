@@ -1,274 +1,310 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
-<meta name="author" content="FamousThemes" />
-<meta name="description" content="Get in the spotlight" />
-<meta name="keywords" content="premium css templates, premium wordpress themes, famous themes, themeforest" />
-<title>John & Sarah's Wedding Website</title>
-<link rel="stylesheet" type="text/css" media="all" href="style.css" />
-<link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-<!-- jQuery -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<!-- DropDownMenu -->
-<script type="text/javascript" src="js/menu.js"></script>
-<script type="text/javascript" charset="utf-8">
-var $ = jQuery.noConflict();
-  $(window).load(function() {
-	
-	$(function() {
-		$('.show_menu').click(function(){
-				$('.menu').fadeIn();
-				$('.show_menu').fadeOut();
-				$('.hide_menu').fadeIn();
-		});
-		$('.hide_menu').click(function(){
-				$('.menu').fadeOut();
-				$('.show_menu').fadeIn();
-				$('.hide_menu').fadeOut();
-		});
-	});
-	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+      <meta name="author" content="FamousThemes" />
+      <meta name="description" content="Get in the spotlight" />
+      <meta name="keywords" content="premium css templates, premium wordpress themes, famous themes, themeforest" />
+      <title>John & Sarah's Wedding Website</title>
+      <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+      <link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+      <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+      <!-- jQuery -->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+      <!-- DropDownMenu -->
+      <script type="text/javascript" src="js/menu.js"></script>
+      <script type="text/javascript" charset="utf-8">
+         var $ = jQuery.noConflict();
+           $(window).load(function() {
+         
+         	$(function() {
+         		$('.show_menu').click(function(){
+         				$('.menu').fadeIn();
+         				$('.show_menu').fadeOut();
+         				$('.hide_menu').fadeIn();
+         		});
+         		$('.hide_menu').click(function(){
+         				$('.menu').fadeOut();
+         				$('.show_menu').fadeIn();
+         				$('.hide_menu').fadeOut();
+         		});
+         	});
+         
+         
+           });
+      </script>
+      <!--Google Analytics-->
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-63706444-1', 'auto');
+         ga('send', 'pageview');
+         
+      </script>
+      <!--jQuery-->
+      <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+      <link rel="stylesheet" href="css/jquery-ui.css">
+      <script src="js/jquery-ui.js"></script>
+      <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+      <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+      <script>
+         var $= jQuery.noConflict();
+         $(function() {
+           $( "#accordion" ).accordion({
+                  event: "click hoverintent"
+          , heightStyle: "content"
+         , active: true
+          , collapsible: true
+         
+           });
+         });
+         
+         /*
+          * hoverIntent | Copyright 2011 Brian Cherne
+          * http://cherne.net/brian/resources/jquery.hoverIntent.html
+          * modified by the jQuery UI team
+          */
+         $.event.special.hoverintent = {
+           setup: function() {
+             $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+           },
+           teardown: function() {
+             $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+           },
+           handler: function( event ) {
+             var currentX, currentY, timeout,
+               args = arguments,
+               target = $( event.target ),
+               previousX = event.pageX,
+               previousY = event.pageY;
+         
+             function track( event ) {
+               currentX = event.pageX;
+               currentY = event.pageY;
+             };
+         
+             function clear() {
+               target
+                 .unbind( "mousemove", track )
+                 .unbind( "mouseout", clear );
+               clearTimeout( timeout );
+             }
+         
+             function handler() {
+               var prop,
+                 orig = event;
+         
+               if ( ( Math.abs( previousX - currentX ) +
+                   Math.abs( previousY - currentY ) ) < 7 ) {
+                 clear();
+         
+                 event = $.Event( "hoverintent" );
+                 for ( prop in orig ) {
+                   if ( !( prop in event ) ) {
+                     event[ prop ] = orig[ prop ];
+                   }
+                 }
+                 // Prevent accessing the original event since the new event
+                 // is fired asynchronously and the old event is no longer
+                 // usable (#6028)
+                 delete event.originalEvent;
+         
+                 target.trigger( event );
+               } else {
+                 previousX = currentX;
+                 previousY = currentY;
+                 timeout = setTimeout( handler, 100 );
+               }
+             }
+         
+             timeout = setTimeout( handler, 100 );
+             target.bind({
+               mousemove: track,
+               mouseout: clear
+             });
+           }
+         };
+      </script>
+      <!--Facebook Remarketing-->
+      <script>(function() {
+         var _fbq = window._fbq || (window._fbq = []);
+         if (!_fbq.loaded) {
+         var fbds = document.createElement('script');
+         fbds.async = true;
+         fbds.src = '//connect.facebook.net/en_US/fbds.js';
+         var s = document.getElementsByTagName('script')[0];
+         s.parentNode.insertBefore(fbds, s);
+         _fbq.loaded = true;
+         }
+         _fbq.push(['addPixelId', '473521516162587']);
+         })();
+         window._fbq = window._fbq || [];
+         window._fbq.push(['track', 'PixelInitialized', {}]);
+      </script>
+      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=473521516162587&amp;ev=PixelInitialized" /></noscript>
+      <!--End Facebook Remarketing-->
+   </head>
+   <body>
+      <div id="shadow_bg">
+         <div id="main_container">
+            <a class="show_menu" href="#">menu</a>
+            <a class="hide_menu" href="#">close menu</a>
+            <div class="menu">
+               <ul id="main_menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="wedding_info.html">Schedule of Events</a></li>
+                  <li><a href="destination.html">Travel & Lodging</a></li>
+                  <li><a class="selected" href="fullwidth.html">More Information</a></li>
+                  <li><a href="rsvp.html">RSVP</a></li>
+               </ul>
+            </div>
+            <div id="center_container">
+               <div id="header">
+                  <div class="title"><a href="index.html">More Information, etc</a></div>
+                  <div class="description"><span class="swirl_left"><span class="swirl_right"> Mammoth Mountain | March 19, 2016</span></span></div>
+               </div>
+               <!-- End of Header-->
+               <div class="content">
+                  <div id="accordion">
+                     <h1>Gift Registry <span>Zola, Macy's, Bloomingdales</span></h1>
+                     <div>
+                        <div class="left13_2">
+                           <h2><a href = "https://www.zola.com/registry/mammoth2016" target="_blank">Zola</a></h2>
+                           <p>We've chosen to register with <strong>Zola</strong>, an easy-to-use registry site that
+                              enables us to
+                              register for the gifts we want, all in one place. Use <a href = "https://www.zola.com/registry/mammoth2016" target="_blank">this link</a> to visit our Zola gift registry
+                           </p>
+                        </div>
+                        <div class="left13_2">
+                           <h2><a href = "http://www.macys.com/registry/wedding/guest/?registryId=2266517" target ="_blank">Macy's</a></h2>
+                           <p>
+                              We're also registered at <strong>Macy's</strong>. <a href =
+                                 "http://www.macys.com/registry/wedding/guest/?registryId=2266517" target = "_blank">Here's a link</a> to our Macy's registry.
+                           </p>
+                        </div>
+                        <div class="left13_2">
+                           <h2><a
+                              href="http://www.bloomingdales.com/registry/wedding/guest/?registryId=2268467&PartnerID=WEDDINGCHANNEL&LinkshareID=260092173&ref=wc", target="_blank">Bloomingdales</a></h2>
+                           <p> We've found some beautiful fine china at <strong>Bloomingdales</strong>. Follow
+                              <a
+                                 href="http://www.bloomingdales.com/registry/wedding/guest/?registryId=2268467&PartnerID=WEDDINGCHANNEL&LinkshareID=260092173&ref=wc", target="_blank">this link</a>
+                              to access our registry.
+                           </p>
+                        </div>
+                     </div>
+                     <h1>Bad Dancing Contest <span>Hosted by Uncle Larry!</span> What you need to know</h1>
+                     <div>
+                        <p>We love bad dancing and we believe that bad dancing is WAY more fun than good
+                           dancing and want to
+                           see your best
+                           bad dance moves, so we're having a bad dancing contest to see who's moves really are
+                           the worst.
+                        </p>
+                        <br/>
+                        <p><strong>Glorious, Ornate Trophies will be awarded to 1st, 2nd, & 3rd place
+                           winners</strong>
+                        </p>
+                        <br/>
+                        <h2><span>Check out this video</span> of John doing some really bad dancing in the streets of San
+                           Francsico
+                        </h2>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/vokiFEafRpU" frameborder="0" allowfullscreen></iframe>
+                     </div>
+                     <h1>Octoberfest-themed <span>Welcome Dinner: </span>What to wear & other details</h1>
+                     <div>
+                        <h2>Bring your Steins and break out your Lederhosen & Dirndls!</h2>
+                        <p>Many of us will be in full Lederhosen & Dirndls, so we encourage people to dress up if
+                           they like, but also please feel free to come dressed as you please.
+                           <strong>If you have a Beer Stein, please bring it!</strong>
+                        </p>
+                        <br/>
+                        <p>Here are some examples of traditional Bavarian Clothing:</p>
+                        <br/>
+                        <img src="images/lederhosen.png" alt="lederhosen"/>
+                        <img src="images/dirndls.png" alt="dirndls"/>
+                     </div>
 
-  });
-  });
-</script>
-<!--Google Analytics-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                     <h1>Lift Ticket Deals <span>Ski Mammoth for less</span></h1>
+                     <div>
+                        <h2>3 days <span> for the price of 2</span></h2>
+                        <p>If you're planning to ski or snowboard at Mammoth, check out this deal for 3 out of 5 days
+                            for
+                            the price of 2 ($198). Must book by Feb 15th.
+                            <br/>
+                            <a href="http://www.mammothmountain.com/email-landing-winter/valpak", target="_blank">Use
+                              this link to learn more.</a>
+                        </p>
+                     </div>
 
-  ga('create', 'UA-63706444-1', 'auto');
-  ga('send', 'pageview');
 
-</script>
-
-<!--jQuery-->
- <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
- <link rel="stylesheet" href="css/jquery-ui.css">
-   <script src="js/jquery-ui.js"></script>
- <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
- <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
-
-  
-  <script>
-  $(function() {
-    $( "#accordion" ).accordion({
-           event: "click hoverintent"
-	  , heightStyle: "content" 
-	 /*, active: true */
-		 , collapsible: true 
-
-    });
-  });
- 
-  /*
-   * hoverIntent | Copyright 2011 Brian Cherne
-   * http://cherne.net/brian/resources/jquery.hoverIntent.html
-   * modified by the jQuery UI team
-   */
-  $.event.special.hoverintent = {
-    setup: function() {
-      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    teardown: function() {
-      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    handler: function( event ) {
-      var currentX, currentY, timeout,
-        args = arguments,
-        target = $( event.target ),
-        previousX = event.pageX,
-        previousY = event.pageY;
- 
-      function track( event ) {
-        currentX = event.pageX;
-        currentY = event.pageY;
-      };
- 
-      function clear() {
-        target
-          .unbind( "mousemove", track )
-          .unbind( "mouseout", clear );
-        clearTimeout( timeout );
-      }
- 
-      function handler() {
-        var prop,
-          orig = event;
- 
-        if ( ( Math.abs( previousX - currentX ) +
-            Math.abs( previousY - currentY ) ) < 7 ) {
-          clear();
- 
-          event = $.Event( "hoverintent" );
-          for ( prop in orig ) {
-            if ( !( prop in event ) ) {
-              event[ prop ] = orig[ prop ];
-            }
-          }
-          // Prevent accessing the original event since the new event
-          // is fired asynchronously and the old event is no longer
-          // usable (#6028)
-          delete event.originalEvent;
- 
-          target.trigger( event );
-        } else {
-          previousX = currentX;
-          previousY = currentY;
-          timeout = setTimeout( handler, 100 );
-        }
-      }
- 
-      timeout = setTimeout( handler, 100 );
-      target.bind({
-        mousemove: track,
-        mouseout: clear
-      });
-    }
-  };
-  </script>
-<!--Facebook Remarketing--> 
-<script>(function() {
-var _fbq = window._fbq || (window._fbq = []);
-if (!_fbq.loaded) {
-var fbds = document.createElement('script');
-fbds.async = true;
-fbds.src = '//connect.facebook.net/en_US/fbds.js';
-var s = document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(fbds, s);
-_fbq.loaded = true;
-}
-_fbq.push(['addPixelId', '473521516162587']);
-})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', 'PixelInitialized', {}]);
-</script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=473521516162587&amp;ev=PixelInitialized" /></noscript>
-<!--End Facebook Remarketing--> 
-
-</head>
-<body>
-<div id="shadow_bg">
-<div id="main_container">
-
-	<a class="show_menu" href="#">menu</a>
-    <a class="hide_menu" href="#">close menu</a>
-	
-<div class="menu">                                                                   
-        <ul id="main_menu">
-        	<li><a href="index.html">Home</a></li>
-            <li><a href="wedding_info.html">Schedule of Events</a></li>
-            <li><a href="destination.html">Travel & Lodging</a></li>
-			<li><a class="selected" href="fullwidth.html">More Information</a></li>
-			<li><a href="gallery.html">Photo Album</a></li>
-
-            <li><a href="contact.html">Contact</a></li> 
-        </ul>
-     </div>
-	
-
-<div id="center_container">
-
-  <div id="header">
-     
-     <div class="title"><a href="index.html">More Information, etc</a></div>
-     <div class="description"><span class="swirl_left"><span class="swirl_right"> Mammoth Mountain | March 19, 2016</span></span></div>
-     
-  </div><!-- End of Header-->
-   
-   <div class="content">
-   
-        <div id="accordion">
-  <h1>Gift Registry <span>Zola, REI, Macy's, Honey-fund</span></h1>
-  <div>
-		<a href="https://www.zola.com/registry/mammoth2016" target = "_blank" title="Zola Wedding Registry"><img src="images/my_photos/zola.jpg" alt="Zola Wedding Registry" title="Zola Wedding Registry" border="0" class="left_pic" /></a>
-		<p><a href='#'><strong>Zola</strong></a>: We've chosen to register with Zola, an easy-to-use registry site that enables us to register for the gifts we want, all in one place. Use <a href = "https://www.zola.com/registry/mammoth2016" target="_blank">this link</a> to visit our Zola gift registry</p>
-		<br>
-		<p> <a href='#'><strong>Macy's</strong></a>: We're also registered at Macy's. <a href = "http://www.macys.com/registry/wedding/guest/?registryId=2266517" target = "_blank">Here's a link to our Macy's registry.</a> </p> 
-		<br>
-		<p> <a href='#'><strong>REI</strong></a>: We love the outdoors! </p>
-		<p> <a href='#'><strong>Honey Fund</strong></a>: We love the outdoors! </p>
-  </div>
-  <h1>Our Honeymoon <span>Whistler, British Columbia</span></h1>
-  <div>
-		<h1>7 days<span> in Snowboard Heaven!</span></h1>
-        <p>We are doubling down and hoping for snow this season, taking 7 days in Whistler, BC. Whistler is known as the best ski resort in North America, and interestingly is a sister city of Mammoth Lakes, as both resorts are owned by the same property company, Intrawest.</p>  
-		<br>
-		<p><a href='#'><strong>Heliskiing</strong></a>: What are we REALLY excited about? Heliskiing!!! We're planning to take a guided heliski tour in the backcountry of Whistler. We've never even been on a helicopter before, so we can hardly imagine what hopping out of one on the top of a mountain is going to be like. If you want to support this dream of ours, please contribute to our honey-fund! </p>
-		
-  </div>
-<h1>Altitude Tips: <span>Mammoth is at 8,000 ft elevation!</span></h1>
-  <div>
-		<p>Mammoth Lakes, CA is located at 8,900 ft above sea level. Our venue, McCoy Station, is even higher at 9,630 feet. Altitude sickness is real, but can be avoided. To ensure you have a great time, please read the below acclimation tips!</p>
-			<br>
-			<p><strong>1.	Arrive Early </strong>- getting acclimated to higher elevations than you’re used to can take anywhere from 1-3 days at a given altitude. Try to take it easy for the first 24 hours of your trip.</p>
-			<br>
-			<p><strong>2.	Watch What You Eat…and Drink</strong> —when all is said and done, complex carbohydrates allow you to use oxygen more efficiently and help maintain your energy levels—both important factors in preventing altitude sickness. So leave your Atkins Diet book at home, and plan on eating plenty of complex carbohydrates including whole grains, fruits, vegetables and legumes. The effects of caffeine and alcohol are also exacerbated at altitude, so be conscious of your intake throughout the weekend.</p>
-			<br>
-			<p><strong>3.	Water. Water. Water.</strong> – You cannot have enough. Start drinking during your drive up, and keep drinking throughout your stay in Mammoth. Electrolyte rich beverages, like Gatorade, are also great to have on hand. </p>
-			<br>
-			<p><strong>4.	 Medications</strong> – If you decide you could be at risk for altitude sickness, book an appointment with your doctor or travel medicine specialist. If feasible, they may recommend acetazolamide, often marketed under the brand name Diamox, which is the most tried and tested drug for altitude sickness prevention and treatment. We also advise you to pack ibuprofen (effective for relieving altitude-induced headaches) and ginger chews, capsules or tea, which can help quell altitude-induced stomach nausea.</p>
-			<br>
-			<p>If you do begin to feel the symptoms of altitude sickness, you may consider using an oxygen canister. You can pre purchase these on Amazon or at big box retailers like Target. John and Sarah will have oxygen available at the wedding…just in case. </p>
-			<br>
-			<p><strong>5.	Know the Danger Signs: </strong>consider descending to a lower altitude if you experience moderate to severe levels of these symptoms:</p>
-			<ul>
-			<li>Headaches
-			<li>Dizziness
-			<li>Loss of appetite
-			<li>Nausea/vomiting
-			<li>Fatigue/loss of energy
-			<li>Insomnia
-			</ul>
-			</p>	
-	</div>
-	
-	
-</div>
-        
-        <div class="divider"></div>
-            
-   </div>
-   
-   <div class="clear"></div> 
-   
-</div>
-
-</div>
-</div>
-
-   
-   <div class="footer">
-       <div class="footer_content">
-       <div class="footer_text">
-       This website is a  <a href="#">John and Sarah Production</a> <br />
-       Photos by <a href="https://instagram.com/superjohn_ca" target="_blank">SuperJohn_CA</a>
-       </div>
-       <div class="footer_menu">
-           <ul>
-         	<li><a href="index.html">Home</a></li>
-            <li><a href="wedding_info.html">Schedule of Events</a></li>
-            <li><a href="destination.html">Travel & Lodging</a></li>
-			<li><a class="selected" href="fullwidth.html">More Information</a></li>
-			<li><a href="gallery.html">Photo Album</a></li>
-            <li><a href="contact.html">Contact</a></li> 
-			<li><a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
-			</ul>
-       </div>
-       <div class="clear"></div>
-       </div>
-       
-   </div>
-
-<script type="text/javascript">
-var main_menu=new main_menu.dd("main_menu");
-main_menu.init("main_menu","menuhover");
-</script>
-</body>
+                     <h1>Our Honeymoon <span>Whistler, British Columbia</span></h1>
+                     <div>
+                        <h1>7 days<span> in Snowboard Heaven!</span></h1>
+                        <p>We are doubling down and hoping for snow this season, taking 7 days in Whistler, BC. Whistler is known as the best ski resort in North America, and interestingly is a sister city of Mammoth Lakes, as both resorts are owned by the same property company, Intrawest.</p>
+                        <br>
+                        <p><a href='#'><strong>Heliskiing</strong></a>: What are we REALLY excited about? Heliskiing!!! We're planning to take a guided heliski tour in the backcountry of Whistler. We've never even been on a helicopter before, so we can hardly imagine what hopping out of one on the top of a mountain is going to be like. If you want to support this dream of ours, please contribute to our honey-fund! </p>
+                     </div>
+                     <h1>Altitude Tips: <span>Mammoth is at 8,000 ft elevation!</span></h1>
+                     <div>
+                        <a name="anchor"></a>
+                        <p>Mammoth Lakes, CA is located at 8,900 ft above sea level. Our venue, McCoy Station, is even higher at 9,630 feet. Altitude sickness is real, but can be avoided. To ensure you have a great time, please read the below acclimation tips!</p>
+                        <br>
+                        <p><strong>1.	Arrive Early </strong>- getting acclimated to higher elevations than you’re used to can take anywhere from 1-3 days at a given altitude. Try to take it easy for the first 24 hours of your trip.</p>
+                        <br>
+                        <p><strong>2.	Watch What You Eat…and Drink</strong> —when all is said and done, complex carbohydrates allow you to use oxygen more efficiently and help maintain your energy levels—both important factors in preventing altitude sickness. So leave your Atkins Diet book at home, and plan on eating plenty of complex carbohydrates including whole grains, fruits, vegetables and legumes. The effects of caffeine and alcohol are also exacerbated at altitude, so be conscious of your intake throughout the weekend.</p>
+                        <br>
+                        <p><strong>3.	Water. Water. Water.</strong> – You cannot have enough. Start drinking during your drive up, and keep drinking throughout your stay in Mammoth. Electrolyte rich beverages, like Gatorade, are also great to have on hand. </p>
+                        <br>
+                        <p><strong>4.	 Medications</strong> – If you decide you could be at risk for altitude sickness, book an appointment with your doctor or travel medicine specialist. If feasible, they may recommend acetazolamide, often marketed under the brand name Diamox, which is the most tried and tested drug for altitude sickness prevention and treatment. We also advise you to pack ibuprofen (effective for relieving altitude-induced headaches) and ginger chews, capsules or tea, which can help quell altitude-induced stomach nausea.</p>
+                        <br>
+                        <p>If you do begin to feel the symptoms of altitude sickness, you may consider using an oxygen canister. You can pre purchase these on Amazon or at big box retailers like Target. John and Sarah will have oxygen available at the wedding…just in case. </p>
+                        <br>
+                        <p><strong>5.	Know the Danger Signs: </strong>consider descending to a lower altitude if you experience moderate to severe levels of these symptoms:</p>
+                        <ul>
+                           <li>Headaches
+                           <li>Dizziness
+                           <li>Loss of appetite
+                           <li>Nausea/vomiting
+                           <li>Fatigue/loss of energy
+                           <li>Insomnia
+                        </ul>
+                        </p>
+                     </div>
+                  </div>
+                  <div class="divider"></div>
+               </div>
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <div class="footer_content">
+            <div class="footer_text">
+               This website is a  <a href="#">John and Sarah Production</a> <br />
+               Photos by <a href="https://instagram.com/superjohn_ca" target="_blank">SuperJohn_CA</a>
+            </div>
+            <div class="footer_menu">
+               <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="wedding_info.html">Schedule of Events</a></li>
+                  <li><a href="destination.html">Travel & Lodging</a></li>
+                  <li><a class="selected" href="fullwidth.html">More Information</a></li>
+                  <li><a href="gallery.html">Photo Album</a></li>
+                  <li><a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
+               </ul>
+            </div>
+            <div class="clear"></div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         var main_menu=new main_menu.dd("main_menu");
+         main_menu.init("main_menu","menuhover");
+      </script>
+   </body>
 </html>
+

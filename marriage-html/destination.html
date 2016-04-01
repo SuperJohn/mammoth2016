@@ -1,378 +1,367 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
-<meta name="keywords" content="mammoth, john and sarah, sarah and john, wedding" />
-<title>John & Sarah's Wedding Website</title>
-<link rel="stylesheet" type="text/css" media="all" href="style.css" />
-<link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-<!-- jQuery -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<!-- DropDownMenu -->
-<script type="text/javascript" src="js/menu.js"></script>
-<script type="text/javascript" charset="utf-8">
-var $ = jQuery.noConflict();
-  $(window).load(function() {
-	
-	$(function() {
-		$('.show_menu').click(function(){
-				$('.menu').fadeIn();
-				$('.show_menu').fadeOut();
-				$('.hide_menu').fadeIn();
-		});
-		$('.hide_menu').click(function(){
-				$('.menu').fadeOut();
-				$('.show_menu').fadeIn();
-				$('.hide_menu').fadeOut();
-		});
-	});
-	
-
-  });
-</script>
-<!--Google Analytics-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-63706444-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<!--jQuery-->
- <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
- <link rel="stylesheet" href="css/jquery-ui.css">
-   <script src="js/jquery-ui.js"></script>
- <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
- <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
-
-  
-  <script>
-  var $= jQuery.noConflict();
-  $(function() {
-    $( "#accordion" ).accordion({
-      event: "click hoverintent"
-	  , heightStyle: "content" 
-	  , active: false
-		 , collapsible: true 
-    });
-  });
- 
-  /*
-   * hoverIntent | Copyright 2011 Brian Cherne
-   * http://cherne.net/brian/resources/jquery.hoverIntent.html
-   * modified by the jQuery UI team
-   */
-  $.event.special.hoverintent = {
-    setup: function() {
-      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    teardown: function() {
-      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    handler: function( event ) {
-      var currentX, currentY, timeout,
-        args = arguments,
-        target = $( event.target ),
-        previousX = event.pageX,
-        previousY = event.pageY;
- 
-      function track( event ) {
-        currentX = event.pageX;
-        currentY = event.pageY;
-      };
- 
-      function clear() {
-        target
-          .unbind( "mousemove", track )
-          .unbind( "mouseout", clear );
-        clearTimeout( timeout );
-      }
- 
-      function handler() {
-        var prop,
-          orig = event;
- 
-        if ( ( Math.abs( previousX - currentX ) +
-            Math.abs( previousY - currentY ) ) < 7 ) {
-          clear();
- 
-          event = $.Event( "hoverintent" );
-          for ( prop in orig ) {
-            if ( !( prop in event ) ) {
-              event[ prop ] = orig[ prop ];
-            }
-          }
-          // Prevent accessing the original event since the new event
-          // is fired asynchronously and the old event is no longer
-          // usable (#6028)
-          delete event.originalEvent;
- 
-          target.trigger( event );
-        } else {
-          previousX = currentX;
-          previousY = currentY;
-          timeout = setTimeout( handler, 100 );
-        }
-      }
- 
-      timeout = setTimeout( handler, 100 );
-      target.bind({
-        mousemove: track,
-        mouseout: clear
-      });
-    }
-  };
-  </script>
-
-  <!--Facebook Remarketing--> 
-<script>(function() {
-var _fbq = window._fbq || (window._fbq = []);
-if (!_fbq.loaded) {
-var fbds = document.createElement('script');
-fbds.async = true;
-fbds.src = '//connect.facebook.net/en_US/fbds.js';
-var s = document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(fbds, s);
-_fbq.loaded = true;
-}
-_fbq.push(['addPixelId', '473521516162587']);
-})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', 'PixelInitialized', {}]);
-</script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=473521516162587&amp;ev=PixelInitialized" /></noscript>
-<!--End Facebook Remarketing--> 
-
-</head>
-<body>
-<div id="shadow_bg">
-<div id="main_container">
-
-	<a class="show_menu" href="#">menu</a>
-    <a class="hide_menu" href="#">close menu</a>
-	
-<div class="menu">                                                                   
-        <ul id="main_menu">
-        	<li><a  href="index.html">Home</a></li>
-            <li><a href="wedding_info.html">Schedule of Events</a></li>
-            <li><a class="selected" href="destination.html">Travel & Lodging</a></li>
-			<li><a href="fullwidth.html">More Information</a></li>
-			<li><a href="gallery.html">Photo Album</a></li>
-
-            <li><a href="contact.html">Contact</a></li> 
-        </ul>
-     </div>
-	
-
-<div id="center_container">
-
-  <div id="header">
-     
-     <div class="title"><a href="index.html">Travel & Lodging Information</a></div>
-     <div class="description"><span class="swirl_left"><span class="swirl_right"> Mammoth Mountain | March 19, 2016</span></span></div>
-     
-  </div><!-- End of Header-->
-     
-   
-   <div class="content">
-   
-    <div id="accordion">
-  <h3>Hotels: <span>Information & Recommended Lodging</span></h3>
-  <div>
-		<p>All of the events for the weekend will be centralized around the Mammoth Village or Main Lodge. We recommend that you stay as close as possible to these central hubs.</p> 
-		<hr><br>	
-		<h1> <a href='http://www.yelp.com/biz/the-westin-monache-resort-mammoth-mammoth-lakes-3'target = "_blank">The Westin Monache Resort (Preferred)</a></h1> 
-		<p>This is where the bride & groom, family, and wedding party will be staying. It's where all the action will be. It's located right across the street from the Village in the center of town</p>
-		<br>
-		<p><strong>Negotiated Room Rates as follows:</strong></p> 
-		<br>
-		<table style="width:100%">
-		  <tr>
-			<th>Room Type</th>
-			<th>Description</th>
-			<th>Negotiated Rate</th>
-		  </tr>
-		  <tr>
-			<td>Studio</td>
-			<td>King + double sofa sleeper, kitchenette (4 max)</td> 
-			<td>$219 + 14% tax / night</td>
-		  </tr>
-		  <tr>
-			<td>One Bedroom Suite</td>
-			<td>King + Queen sofa sleeper, kitchenette + balcony (4-5 max)</td> 
-			<td>$289 + 14% tax / night</td>
-		  </tr>
-		    <tr>
-			<td>Two Bedroom </td>
-			<td>King + Queen + Queen sofa sleeper, kitchenette (6-7 max)</td> 
-			<td>$394 + 14% tax / night</td>
-		  </tr>
-		</table>
-		<br>
-		
-		<p><strong>Making Reservations: </strong>Guests are to call (760) 934-0454 to make their reservation, and refer to the Sullivan-Houghton wedding.  Any guests who call central reservations or attempt to reserve through any other portal will not receive the group discount rates.</p>
-		<br>
-		<p><strong>Guest Deposits:</strong> A deposit equal to one night stay will be charged at the time a guest makes a room reservation, and upon check-in, will be applied towards the guest’s bill. Deposits paid by guests are refundable if notice is received by Hotel at least 14 days prior to arrival and a cancellation number is obtained.</p> 
-		<br>
-		<hr>
-		<h1> <a href='http://www.yelp.com/biz/shilo-inns-mammoth-lakes-mammoth-lakes' target="_blank">The Shilo Inn (Best Value)</a></h1> 
-		<p>We chose Shilo Inn as the most affordable option for guests. The bus to the Village picks up right outside, there's free wi-fi, free breakfast, indoor pool, fitness facilities, and Sauna.</p> 
-		<br>
-		<p><strong> Rooms are starting at $110 / night</strong></p>
-		
-		<br>
-		<p>Please ask for the Sullivan-Houghton wedding block at the Shilo Inn. Special group prices have been negotiated, but calls must be made directly to the hotel, not booked on line. Prices are based on room availability at the time of booking.</p> 
-		<br>
-		<hr> 		
-		
-		<h1><a href='#'>Mammoth Mountain Owned Properties</a></h1>
-		<p>Properties include</p>
-		<ul>
-		<li><a href="http://www.MammothMountain.com" target="_blank">The Village Lodge</a>, <strong>starting at $269++</strong></li>
-		<li><a href="http://www.JuniperSpringsMammoth.com" target="_blank">Juniper Spring Mammoth</a>, <strong>starting at $219++</strong></li>
-		<li><a href="http://www.MammothMountain.com" target="_blank">Mammoth Mountain Inn</a>, <strong>starting at $129++</strong></li>
-		</ul>
-		<br>
-		<p>All wedding guests receive a 20% Discount at Mammoth Mountain properties. No online booking is permitted to get these rates. Please call 1-800-Mammoth (800- 626-6684) and reference the booking information below. A $20 nightly resort fee will also apply at these properties, and rooms must be booked by Feb. 17, 2016.
-		<br>
-		
-		Group Name: Sullivan-Houghton Wedding 
-		<br><br>
-		Group Booking ID #20372.
-		</p>
-
-		
-  </div>
-  <h1>Renting a house? <span>Property Rental Agencies</span></h1>
-  <div>
-		<h1>Local alternatives to<span> Airbnb, VRBO, etc </span></h1>
-        <p>	For those wanting a home or condo for your stay in Mammoth, these agencies will give you great options with lots of local inventory not available on popular rental sites:<p>
-		<br>
-		<ul>
-		<li><a href="http://www.TheBestOfMammoth.com" target="_blank">Best of Mammoth</a> – TheBestOfMammoth.com</li> 
-		<li><a href="http://www.MammothLakes.com" target="_blank">Central Reservations of Mammoth</a> – MammothLakes.com</li>
-		<li><a href="http://www.1888Mammoth.com" target="_blank">Grand Mammoth Resorts</a> – 1888Mammoth.com</li>
-		</ul>
-		</p>  
-		
-  </div>
-<h1>Transportation in Mammoth <span>Local Shuttles & More</span></h1>
-  <div>
-		<h1>No Car?<span> No Problem! </span></h1>
-				
-		<p><strong>Bus:</strong> Mammoth has great public transportation that connects most of the town to our event spaces. Buses pick up every 15 minutes at most stops, so they're a really convenient way to get around town. See <a href="http://www.ci.mammoth-lakes.ca.us/DocumentCenter/View/4250" target="_blank">maps and more information here</a>.</p>  
-		<br>
-		<p><strong>Shuttle:</strong> Shuttles to and from the wedding will be provided from the village.</p> 
-		<br>
-		<p><strong>Taxi:</strong> Mammoth Taxi – 760-934-8294</p>
-		
-	</div>
-	
-	<h1>Driving <span>to Mammoth </span></h1>
-	<div>
-		<h1>From <span>Los Angeles</span></h1>
-		<p> <a href='#'><strong>Driving from Southern California will take approximately 6 hours. </strong></a></p> 
-		<br>
-		<p>Take the 405 freeway north to the 5 freeway north to Highway 14 north to Highway 395 north. Exit on Highway 203 to Mammoth Lakes. Highway 203 turns into Old Mammoth Road and leads you to the center of town. </p> 		
-		<br>
-		<h1>From <span>San Diego / Orange County</span></h1>
-		<p> <a href='#'><strong>Driving from the San Diego area will take approximately 7 hours and from the Orange County area will take approximately 6 hours.</strong></a></p> 
-		<br>
-		<p> Take the 15 freeway north to Highway 395 north. Exit on Highway 203 to Mammoth Lakes. Highway 203 turns into Old Mammoth Road and leads you to the center of town. </p> 		
-		<br>
-		<h1>From <span>San Francisco / Bay Area</span></h1>
-		<p> <a href='#'><strong>Driving from the San Francisco / Sacramento areas will take approximately 7-8 hours</strong></a></p> 
-		<br>
-		<p> Depending on road conditions, various routes may be taken, but in the winter – John and Sarah recommend taking the 50 east to the 89 south to the 395 south. Exit on Highway 203 to Mammoth Lakes. Please consult Caltrans at 800-427-7623 to assess road closures through the Yosemite/Tahoe area. </p> 
-		<br>
-		<p>For guests coming from San Francisco, we highly recommend taking the Thursday night shuttle to avoid potential winter weather through Tahoe.</p>
-		<br>
-		<hr>
-		<br>
-		<p>No matter where you’re coming from, drive safely please!</p>
-		<br>
-	</div>
-		<h1>Flying to Mammoth <span>Airport Code: MMH</span></h1>
-  <div>	
-		<p>Guests can fly nonstop to Mammoth Lakes (MMH) from Los Angeles, San Francisco San Diego, and Denver.</p>
-		<br>
-		<p>From Mammoth Yosemite Airport (MMH), you are only a 10 minute drive to Mammoth Lakes. Please see visitmammoth.com or check with your hotel for information about Airport Shuttles available to you.</p> 
-		<br>
-		<p>If you do decide to fly, we recommend that you leave ample time to arrive before the wedding and that you arrange a contingency plan for poor weather. Flights are often canceled in the winter, and we would hate for you to miss a powder day!</p> 	
-	</div>
-		
-	<h1>Shuttle from San Francisco to Mammoth<span> (tentative)</span></h1>
-  <div>	
-		<p>John and Sarah want to make sure all guests arrive safely and in style! Driving from San Francisco, in particular, involves driving through winding mountain passes that are not an issue if you are coming from the south. If you are coming from SF, we recommend that you consider taking our Thursday night shuttle service to Mammoth. All costs for this option will be covered by the bride’s family, we only request that you RSVP by October 30th, so we can gauge interest. </p>
-		<br>
-		<p>More details to come. </p> 
-	</div>
-	
-	</div>
-	
-	</div> 	       
-        
-    
-            
-   </div>
-   
-   <div class="clear"></div> 
-   
-</div>
-
-</div>
-</div>
-
-   
-   <div class="footer">
-       <div class="footer_content">
-       <div class="footer_text">
-       This website is a  <a href="#">John and Sarah Production</a> <br />
-       Photos by <a href="https://instagram.com/superjohn_ca" target="_blank">SuperJohn_CA</a>
-       </div>
-       <div class="footer_menu">
-           <ul>
-          <li><a  href="index.html">Home</a></li>
-            <li><a href="wedding_info.html">Our wedding</a></li>
-            <li><a href="fullwidth.html">More Information</a>
-            <li><a class="selected" href="destination.html">Travel & Lodging</a></li>
-			<li><a href="rsvp.html">RSVP</a></li>
-            <li><a href="contact.html">Contact</a></li> 
-           </ul>
-       </div>
-       <div class="clear"></div>
-       </div>
-       <!-- Google Code for Remarketing Tag -->
-			<!--------------------------------------------------
-			Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
-			--------------------------------------------------->
-			<script type="text/javascript">
-			/* <![CDATA[ */
-			var google_conversion_id = 1017853366;
-			var google_custom_params = window.google_tag_params;
-			var google_remarketing_only = true;
-			/* ]]> */
-			</script>
-			<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-			</script>
-			<noscript>
-			<div style="display:inline;">
-			<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1017853366/?value=0&amp;guid=ON&amp;script=0"/>
-			</div>
-			</noscript>
-				<!--[ End Google Adwords ReMarketing Tags]-->
-   </div>
-
-<script type="text/javascript">
-var main_menu=new main_menu.dd("main_menu");
-main_menu.init("main_menu","menuhover");
-</script>
-</body>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+      <meta name="keywords" content="mammoth, john and sarah, sarah and john, wedding" />
+      <title>John & Sarah's Wedding Website</title>
+      <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+      <link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+      <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+      <!-- jQuery -->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+      <!-- DropDownMenu -->
+      <script type="text/javascript" src="js/menu.js"></script>
+      <script type="text/javascript" charset="utf-8">
+         var $ = jQuery.noConflict();
+           $(window).load(function() {
+         	
+         	$(function() {
+         		$('.show_menu').click(function(){
+         				$('.menu').fadeIn();
+         				$('.show_menu').fadeOut();
+         				$('.hide_menu').fadeIn();
+         		});
+         		$('.hide_menu').click(function(){
+         				$('.menu').fadeOut();
+         				$('.show_menu').fadeIn();
+         				$('.hide_menu').fadeOut();
+         		});
+         	});
+         	
+         
+           });
+      </script>
+      <!--Google Analytics-->
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-63706444-1', 'auto');
+         ga('send', 'pageview');
+         
+      </script>
+      <!--jQuery-->
+      <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+      <link rel="stylesheet" href="css/jquery-ui.css">
+      <script src="js/jquery-ui.js"></script>
+      <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+      <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+      <script>
+         var $= jQuery.noConflict();
+         $(function() {
+           $( "#accordion" ).accordion({
+             event: "click hoverintent"
+          , heightStyle: "content" 
+          , active: false
+          , collapsible: true 
+           });
+         });
+         
+         /*
+          * hoverIntent | Copyright 2011 Brian Cherne
+          * http://cherne.net/brian/resources/jquery.hoverIntent.html
+          * modified by the jQuery UI team
+          */
+         $.event.special.hoverintent = {
+           setup: function() {
+             $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+           },
+           teardown: function() {
+             $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+           },
+           handler: function( event ) {
+             var currentX, currentY, timeout,
+               args = arguments,
+               target = $( event.target ),
+               previousX = event.pageX,
+               previousY = event.pageY;
+         
+             function track( event ) {
+               currentX = event.pageX;
+               currentY = event.pageY;
+             };
+         
+             function clear() {
+               target
+                 .unbind( "mousemove", track )
+                 .unbind( "mouseout", clear );
+               clearTimeout( timeout );
+             }
+         
+             function handler() {
+               var prop,
+                 orig = event;
+         
+               if ( ( Math.abs( previousX - currentX ) +
+                   Math.abs( previousY - currentY ) ) < 7 ) {
+                 clear();
+         
+                 event = $.Event( "hoverintent" );
+                 for ( prop in orig ) {
+                   if ( !( prop in event ) ) {
+                     event[ prop ] = orig[ prop ];
+                   }
+                 }
+                 // Prevent accessing the original event since the new event
+                 // is fired asynchronously and the old event is no longer
+                 // usable (#6028)
+                 delete event.originalEvent;
+         
+                 target.trigger( event );
+               } else {
+                 previousX = currentX;
+                 previousY = currentY;
+                 timeout = setTimeout( handler, 100 );
+               }
+             }
+         
+             timeout = setTimeout( handler, 100 );
+             target.bind({
+               mousemove: track,
+               mouseout: clear
+             });
+           }
+         };
+      </script>
+      <!--Facebook Remarketing--> 
+      <script>(function() {
+         var _fbq = window._fbq || (window._fbq = []);
+         if (!_fbq.loaded) {
+         var fbds = document.createElement('script');
+         fbds.async = true;
+         fbds.src = '//connect.facebook.net/en_US/fbds.js';
+         var s = document.getElementsByTagName('script')[0];
+         s.parentNode.insertBefore(fbds, s);
+         _fbq.loaded = true;
+         }
+         _fbq.push(['addPixelId', '473521516162587']);
+         })();
+         window._fbq = window._fbq || [];
+         window._fbq.push(['track', 'PixelInitialized', {}]);
+      </script>
+      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=473521516162587&amp;ev=PixelInitialized" /></noscript>
+      <!--End Facebook Remarketing--> 
+   </head>
+   <body>
+      <div id="shadow_bg">
+         <div id="main_container">
+            <a class="show_menu" href="#">menu</a>
+            <a class="hide_menu" href="#">close menu</a>
+            <div class="menu">
+               <ul id="main_menu">
+                  <li><a  href="index.html">Home</a></li>
+                  <li><a href="wedding_info.html">Schedule of Events</a></li>
+                  <li><a class="selected" href="destination.html">Travel & Lodging</a></li>
+                  <li><a href="fullwidth.html">More Information</a></li>
+                  <li><a href="rsvp.html">RSVP</a></li>
+               </ul>
+            </div>
+            <div id="center_container">
+               <div id="header">
+                  <div class="title"><a href="index.html">Travel & Lodging Information</a></div>
+                  <div class="description"><span class="swirl_left"><span class="swirl_right"> Mammoth Mountain | March 19, 2016</span></span></div>
+               </div>
+               <!-- End of Header-->
+               <div class="content">
+                  <div id="accordion">
+                     <h3>Hotels: <span>Information & Recommended Lodging</span></h3>
+                     <div>
+                        <p>All of the events for the weekend will be centralized around the Mammoth Village or Main Lodge. We recommend that you stay as close as possible to these central hubs.</p>
+                        <hr>
+                        <br>	
+                        <h1> <a href='http://www.yelp.com/biz/the-westin-monache-resort-mammoth-mammoth-lakes-3'target = "_blank">The Westin Monache Resort (Preferred)</a></h1>
+                        <p>This is where the bride & groom, family, and wedding party will be staying. It's where all the action will be. It's located right across the street from the Village in the center of town</p>
+                        <br>
+                        <p><strong>Negotiated Room Rates as follows:</strong></p>
+                        <br>
+                        <table style="width:100%">
+                           <tr>
+                              <th>Room Type</th>
+                              <th>Description</th>
+                              <th>Negotiated Rate</th>
+                           </tr>
+                           <tr>
+                              <td>Studio</td>
+                              <td>King + double sofa sleeper, kitchenette (4 max)</td>
+                              <td>$219 + 14% tax / night</td>
+                           </tr>
+                           <tr>
+                              <td>One Bedroom Suite</td>
+                              <td>King + Queen sofa sleeper, kitchenette + balcony (4-5 max)</td>
+                              <td>$289 + 14% tax / night</td>
+                           </tr>
+                           <tr>
+                              <td>Two Bedroom </td>
+                              <td>King + Queen + Queen sofa sleeper, kitchenette (6-7 max)</td>
+                              <td>$394 + 14% tax / night</td>
+                           </tr>
+                        </table>
+                        <br>
+                        <p><strong>Making Reservations: </strong>Guests are to call (760) 934-0454 to make their reservation, and refer to the Sullivan-Houghton wedding.  Any guests who call central reservations or attempt to reserve through any other portal will not receive the group discount rates.</p>
+                        <br>
+                        <p><strong>Guest Deposits:</strong> A deposit equal to one night stay will be charged at the time a guest makes a room reservation, and upon check-in, will be applied towards the guest’s bill. Deposits paid by guests are refundable if notice is received by Hotel at least 14 days prior to arrival and a cancellation number is obtained.</p>
+                        <br>
+                        <hr>
+                        <h1> <a href='http://www.yelp.com/biz/shilo-inns-mammoth-lakes-mammoth-lakes' target="_blank">The Shilo Inn (Best Value)</a></h1>
+                        <p>We chose Shilo Inn as the most affordable option for guests. The bus to the Village picks up right outside, there's free wi-fi, free breakfast, indoor pool, fitness facilities, and Sauna.</p>
+                        <br>
+                        <table style="width:100%">
+                           <tr>
+                              <th>Room Type</th>
+                              <th>Description</th>
+                              <th>Negotiated Rate</th>
+                           </tr>
+                           <tr>
+                              <td>Mini-Suite: 1 Kind Bed</td>
+                              <td>King + Free internet, Free Breakfast</td>
+                              <td>$110 + tax / night</td>
+                           </tr>
+                           <tr>
+                              <td>Mini-Suite: 2 Queen Beds</td>
+                              <td>2 Queen Beds + Free internet, Free Breakfast</td>
+                              <td>$110 + tax / night</td>
+                           </tr>
+                        </table>
+                        <p>Features & Amenities: This place is a really, really great deal.</p>
+                        <ul>
+                           <li>24 Hour Fitness Room</li>
+                           <li>24 Hour Jacuzzi</li>
+                           <li>24 hour Swimming Pool</li>
+                           <li>Continental Breakfast Free to Guests</li>
+                           <li>Free High Speed Internet Access</li>
+                           <li>Dog Friendly</li>
+                        </ul>
+                        <p>Please call & ask for the Sullivan-Houghton wedding block at the Shilo Inn, <strong>Phone: (760) 934-4500</strong>. Special group prices have been negotiated, but calls must be made directly to the hotel, not booked on line. Prices are based on room availability at the time of booking.</p>
+                        <br>
+                        <hr>
+                        <h1><a href='#'>Mammoth Mountain Owned Properties</a></h1>
+                        <table style="width:100%">
+                           <tr>
+                              <th>Property Name</th>
+                              <th>Location</th>
+                              <th>Rate</th>
+                           </tr>
+                           <tr>
+                              <td><a href="http://www.MammothMountain.com" target="_blank">The Village Lodge</a></td>
+                              <td>The Village - very central @ the hub of Mammoth! Across from the Westin.</td>
+                              <td><strong>starting at $269++</strong></td>
+                           </tr>
+                           <tr>
+                              <td><a href="http://www.JuniperSpringsMammoth.com" target="_blank">Juniper Spring Mammoth</a></td>
+                              <td>Eagle Lodge - far from the festivities, but ski-in / ski-out.</td>
+                              <td><strong>starting at $219++</strong></td>
+                           </tr>
+                           <tr>
+                              <td><a href="http://www.MammothMountain.com" target="_blank">Mammoth Mountain Inn</a></td>
+                              <td>At Main Lodge, bottom of the gondola. Really Cool location. Ski-in / Ski-out</td>
+                              <td><strong>starting at $129++</strong></td>
+                           </tr>
+                        </table>
+                        <br>
+                        <p>All wedding guests receive a 20% Discount at Mammoth Mountain properties. No online booking is permitted to get these rates. Please call 1-800-Mammoth (800- 626-6684) and reference the booking information below. A $20 nightly resort fee will also apply at these properties, and rooms must be booked by Feb. 17, 2016.
+                           <br>
+                           Group Name: Sullivan-Houghton Wedding 
+                           <br><br>
+                           Group Booking ID #20372.
+                        </p>
+                     </div>
+                     <h1>Renting a house? <span>Property Rental Agencies</span></h1>
+                     <div>
+                        <h1>Local alternatives to<span> Airbnb, VRBO, etc </span></h1>
+                        <p>	For those wanting a home or condo for your stay in Mammoth, these agencies will give you great options with lots of local inventory not available on popular rental sites:
+                        <p>
+                           <br>
+                        <ul>
+                           <li><a href="http://www.TheBestOfMammoth.com" target="_blank">Best of Mammoth</a> – TheBestOfMammoth.com</li>
+                           <li><a href="http://www.MammothLakes.com" target="_blank">Central Reservations of Mammoth</a> – MammothLakes.com</li>
+                           <li><a href="http://www.1888Mammoth.com" target="_blank">Grand Mammoth Resorts</a> – 1888Mammoth.com</li>
+                        </ul>
+                        </p>  
+                     </div>
+                     <h1>Transportation in Mammoth <span>Local Shuttles & More</span></h1>
+                     <div>
+                        <h1>No Car?<span> No Problem! </span></h1>
+                        <p><strong>Bus:</strong> Mammoth has great public transportation that connects most of the town to our event spaces. Buses pick up every 15 minutes at most stops, so they're a really convenient way to get around town. See <a href="http://www.ci.mammoth-lakes.ca.us/DocumentCenter/View/4250" target="_blank">maps and more information here</a>.</p>
+                        <br>
+                        <p><strong>Shuttle:</strong> Shuttles to and from the wedding will be provided from the village.</p>
+                        <br>
+                        <p><strong>Taxi:</strong> Mammoth Taxi – 760-934-8294</p>
+                     </div>
+                     <h1>Driving <span>to Mammoth </span></h1>
+                     <div>
+                        <img src="images/mammoth_driving_times.png" alt=""/>
+                        <hr>
+                        <br>
+                        <p>No matter where you’re coming from, drive safely please!</p>
+                        <br>
+                     </div>
+                     <h1>Flying to Mammoth <span>Airport Code: MMH</span></h1>
+                     <div>
+                        <p>Guests can fly nonstop to Mammoth Lakes (MMH) from Los Angeles, San Francisco San Diego, and Denver.</p>
+                        <br>
+                        <p>From Mammoth Yosemite Airport (MMH), you are only a 10 minute drive to Mammoth Lakes. Please see visitmammoth.com or check with your hotel for information about Airport Shuttles available to you.</p>
+                        <br>
+                        <p>If you do decide to fly, we recommend that you leave ample time to arrive before the wedding and that you arrange a contingency plan for poor weather. Flights are often canceled in the winter, and we would hate for you to miss a powder day!</p>
+                     </div>
+                     <h1>Shuttle from San Francisco to Mammoth</h1>
+                     <div>
+                        <p>John and Sarah want to make sure all guests arrive safely and in style! Driving from San Francisco, in particular, involves driving through winding mountain passes that are not an issue if you are coming from the south. If you are coming from SF, we recommend that you consider taking our Thursday night shuttle service to Mammoth. All costs for this option will be covered by the bride’s family, we only request that you RSVP by October 30th, so we can gauge interest. </p>
+                        <br>
+                        <p>For questions or more information, please contact our shuttle program manager, Polina Lyandres @ (925)
+                           457-6572
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+         </div>
+      </div>
+      </div>
+      <div class="footer">
+         <div class="footer_content">
+            <div class="footer_text">
+               This website is a  <a href="#">John and Sarah Production</a> <br />
+               Photos by <a href="https://instagram.com/superjohn_ca" target="_blank">SuperJohn_CA</a>
+            </div>
+            <div class="footer_menu">
+               <ul>
+                  <li><a  href="index.html">Home</a></li>
+                  <li><a href="wedding_info.html">Our wedding</a></li>
+                  <li><a href="fullwidth.html">More Information</a>
+                  <li><a class="selected" href="destination.html">Travel & Lodging</a></li>
+                  <li><a href="rsvp.html">RSVP</a></li>
+               </ul>
+            </div>
+            <div class="clear"></div>
+         </div>
+         <!-- Google Code for Remarketing Tag -->
+         <!--------------------------------------------------
+            Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+            --------------------------------------------------->
+         <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1017853366;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+         </script>
+         <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+         <noscript>
+            <div style="display:inline;">
+               <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1017853366/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
+         </noscript>
+         <!--[ End Google Adwords ReMarketing Tags]-->
+      </div>
+      <script type="text/javascript">
+         var main_menu=new main_menu.dd("main_menu");
+         main_menu.init("main_menu","menuhover");
+      </script>
+   </body>
 </html>
+

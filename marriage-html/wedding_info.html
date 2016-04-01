@@ -1,319 +1,358 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
-<meta name="author" content="FamousThemes" />
-<meta name="description" content="Get in the spotlight" />
-<meta name="keywords" content="premium css templates, premium wordpress themes, famous themes, themeforest" />
-<title>John & Sarah's Wedding Website</title>
-<link rel="stylesheet" type="text/css" media="all" href="style.css" />
-<link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-<!-- jQuery -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<!-- PrettyPhoto -->
-<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" src="js/custom.quicksand.js"></script>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+      <title>John & Sarah's Wedding Website</title>
+      <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+      <link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+      <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+      <!-- jQuery -->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+      <!-- PrettyPhoto -->
+      <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript" src="js/custom.quicksand.js"></script>
+      <!-- DropDownMenu -->
+      <script type="text/javascript" src="js/menu.js"></script>
+      <script type="text/javascript" charset="utf-8">
+         var $ = jQuery.noConflict();
+           $(window).load(function() {
 
-<!-- DropDownMenu -->
-<script type="text/javascript" src="js/menu.js"></script>
-<script type="text/javascript" charset="utf-8">
-var $ = jQuery.noConflict();
-  $(window).load(function() {
-	
-	$(function() {
-		$('.show_menu').click(function(){
-				$('.menu').fadeIn();
-				$('.show_menu').fadeOut();
-				$('.hide_menu').fadeIn();
-		});
-		$('.hide_menu').click(function(){
-				$('.menu').fadeOut();
-				$('.show_menu').fadeIn();
-				$('.hide_menu').fadeOut();
-		});
-	});
-	
-
-  });
-</script>
-<!--Google Analytics-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-63706444-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+         	$(function() {
+         		$('.show_menu').click(function(){
+         				$('.menu').fadeIn();
+         				$('.show_menu').fadeOut();
+         				$('.hide_menu').fadeIn();
+         		});
+         		$('.hide_menu').click(function(){
+         				$('.menu').fadeOut();
+         				$('.show_menu').fadeIn();
+         				$('.hide_menu').fadeOut();
+         		});
+         	});
 
 
-<!--jQuery-->
- <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
- <link rel="stylesheet" href="css/jquery-ui.css">
-   <script src="js/jquery-ui.js"></script>
- <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
- <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+           });
+      </script>
+      <!--Google Analytics-->
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  
-  <script>
-  $(function() {
-    $( "#accordion" ).accordion({
-           event: "click hoverintent"
-	  , heightStyle: "content" 
-	  , active: false
-		 , collapsible: true 
+         ga('create', 'UA-63706444-1', 'auto');
+         ga('send', 'pageview');
 
-    });
-  });
- 
-  /*
-   * hoverIntent | Copyright 2011 Brian Cherne
-   * http://cherne.net/brian/resources/jquery.hoverIntent.html
-   * modified by the jQuery UI team
-   */
-  $.event.special.hoverintent = {
-    setup: function() {
-      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    teardown: function() {
-      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    handler: function( event ) {
-      var currentX, currentY, timeout,
-        args = arguments,
-        target = $( event.target ),
-        previousX = event.pageX,
-        previousY = event.pageY;
- 
-      function track( event ) {
-        currentX = event.pageX;
-        currentY = event.pageY;
-      };
- 
-      function clear() {
-        target
-          .unbind( "mousemove", track )
-          .unbind( "mouseout", clear );
-        clearTimeout( timeout );
-      }
- 
-      function handler() {
-        var prop,
-          orig = event;
- 
-        if ( ( Math.abs( previousX - currentX ) +
-            Math.abs( previousY - currentY ) ) < 7 ) {
-          clear();
- 
-          event = $.Event( "hoverintent" );
-          for ( prop in orig ) {
-            if ( !( prop in event ) ) {
-              event[ prop ] = orig[ prop ];
-            }
-          }
-          // Prevent accessing the original event since the new event
-          // is fired asynchronously and the old event is no longer
-          // usable (#6028)
-          delete event.originalEvent;
- 
-          target.trigger( event );
-        } else {
-          previousX = currentX;
-          previousY = currentY;
-          timeout = setTimeout( handler, 100 );
-        }
-      }
- 
-      timeout = setTimeout( handler, 100 );
-      target.bind({
-        mousemove: track,
-        mouseout: clear
-      });
-    }
-  };
-  </script>
+      </script>
+      <!--jQuery-->
+      <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+      <link rel="stylesheet" href="css/jquery-ui.css">
+      <script src="js/jquery-ui.js"></script>
+      <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+      <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+      <script>
+         $(function() {
+           $( "#accordion" ).accordion({
+                  event: "click hoverintent"
+          , heightStyle: "content"
+          , active: false
+          , collapsible: true
 
-  <!--Facebook Remarketing--> 
-<script>(function() {
-var _fbq = window._fbq || (window._fbq = []);
-if (!_fbq.loaded) {
-var fbds = document.createElement('script');
-fbds.async = true;
-fbds.src = '//connect.facebook.net/en_US/fbds.js';
-var s = document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(fbds, s);
-_fbq.loaded = true;
-}
-_fbq.push(['addPixelId', '473521516162587']);
-})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', 'PixelInitialized', {}]);
-</script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=473521516162587&amp;ev=PixelInitialized" /></noscript>
-<!--End Facebook Remarketing--> 
-  
-</head>
-<body>
-<div id="shadow_bg">
-<div id="main_container">
+           });
+         });
 
-	<a class="show_menu" href="#">menu</a>
-    <a class="hide_menu" href="#">close menu</a>
-	
-<div class="menu">                                                                   
-        <ul id="main_menu">
-        	<li><a  href="index.html">Home</a></li>
-            <li><a class="selected" href="wedding_info.html">Schedule of Events</a></li>
-            <li><a href="destination.html">Travel & Lodging</a></li>
-			<li><a href="fullwidth.html">More Information</a></li>
-			<li><a href="gallery.html">Photo Album</a></li>
-            <li><a href="contact.html">Contact</a></li> 
-        </ul>
-     </div>	
+         /*
+          * hoverIntent | Copyright 2011 Brian Cherne
+          * http://cherne.net/brian/resources/jquery.hoverIntent.html
+          * modified by the jQuery UI team
+          */
+         $.event.special.hoverintent = {
+           setup: function() {
+             $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+           },
+           teardown: function() {
+             $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+           },
+           handler: function( event ) {
+             var currentX, currentY, timeout,
+               args = arguments,
+               target = $( event.target ),
+               previousX = event.pageX,
+               previousY = event.pageY;
 
-<div id="center_container">
+             function track( event ) {
+               currentX = event.pageX;
+               currentY = event.pageY;
+             };
 
-  <div id="header">
-     
-     <div class="title"><a href="wedding_info.html">Schedule of Events</a></div>
-     <div class="description"><span class="swirl_left"><span class="swirl_right"> Thursday - Sunday, March 18th-20th, 2016</span></span></div>
-     
-  </div><!-- End of Header-->    
+             function clear() {
+               target
+                 .unbind( "mousemove", track )
+                 .unbind( "mouseout", clear );
+               clearTimeout( timeout );
+             }
 
-   
-   <div class="content">
-          
-	<div id="accordion">
-  <h1>Thursday: <span>Arrive in Mammoth Lakes</span></h1>
-  <div>
-		<p><a href='#'><strong>Afternoon</strong></a>: We recommend that guests arrive in Mammoth on Thursday night, so you can acclimate to the elevation and participate in Friday’s fun events! 
-		The town of Mammoth Lakes is approximately 8,000 feet above sea level. For those of you who don’t know what this means – head over to our FAQ section. You’ll thank us later. </p>
-		<br>
-		<p> <a href='#'><strong>5:00 pm</strong></a>: Welcome Cocktail Hour: For anyone who does arrive early to town, Christine Houghton will be hosting a St. Patrick’s Day cocktail hour at the Westin. Sarah will soon be changing her Irish last name, so let’s raise our glasses to Sarah’s last few days as a Sullivan!</p> 
-		<br>
-		<p> <a href='#'><strong>6:00 pm</strong></a>: Shuttle from San Francisco: For guests leaving from the San Francisco area, we may have a shuttle to help you brave the winding roads. For more information, see the shuttle section of the Travel and Lodging page. Please make sure to let us know if you think you may want to hitch a ride. </p>
-  </div>
-  <h1>Friday: <span>Snow Day & Welcome Dinner</span></h1>
-  <div>
-		<h1>All Day:<span> Snow Day!!!</span></h1>
-        <p><a href='#'><strong>9:00am</strong></a>: Meetup at Main Lodge: Let’s hit the slopes! John and Sarah love snowboarding, and they want to share California’s best snow with you. We’ll have a guided route with stops along the way that are suitable for both beginners and advanced skiers. Please RSVP when you get your official invitation, so we can look into discounted tickets.</p>  
-		<br>
-		<p><a href='#'><strong>10:00am</strong></a>: Tube Park Mania: Don’t snowboard or ski? A group will be at the tube park making snow angels and enjoying this winter wonderland. </p>
-		<br>
-		<p><a href='#'><strong>12:00pm</strong></a>: Lunch on Mammoth Mountain at Canyon Lodge: Whether you’re snowboarding or not, we would love to see you for a mid-day bite to eat. Canyon Lodge is accessible via the free gondola from the Village. </p>
-		<br> 
-		</p>
-		
-		<h1>Friday Evening: <span>Welcome Dinner</span></h1>
-        <a href="images/my_photos/mbc2.png" rel="prettyPhoto[gallery]" title="Mammoth Brewing Company"><img src="images/my_photos/mammoth-brewing-company-logo.jpg" alt="mammoth brewing company logo" title="mammoth brewing company logo" border="0" class="left_pic" /></a>
-		<a href="images/my_photos/mbc2.png" rel="prettyPhoto[gallery]" title="Lorem ipsum sit amet">
-		<a href="images/my_photos/mammoth-brewing-company-logo.jpg" rel="prettyPhoto[gallery]" title="Lorem ipsum sit amet"></a>
-        <p><a href='#'><strong>6:00pm</strong></a>: Welcome Dinner:  Bring your Steins and break out your Lederhosen & Dirndls – Everyone is invited to a German Style reception at <a href="http://www.mammothbrewingco.com/" target="_blank">Mammoth Brewing Company</a>! Guests are encouraged to dress in traditional garb, as we make merry at this quintessential Mammoth beer hall.</p>	
-  </div>
-<h1>Saturday: <span>Our Wonderous Winter Wedding</span></h1>
-  <div>
-		<p> <a href='#'><strong>Morning & Afternoon: </strong></a>Have a Great Day in Mammoth: While the wedding party is preparing for the big event, we hope you’ll enjoy some of Mammoth’s Best. Sarah and John’s Favorites Include</p>
-		
-		<ul>
-		  <li>Hot Springs</li>
-		  <li>Cross Country Skiing or Snowshoeing at Tamarack</li>
-		  <li>Take a Scenic Gondola Ride to the top of Mammoth Mountain. The views are spectacular.</li>
-		  <li>Bowling and Indoor Golfing at Mammoth Activity Center</li>
-		  <li>Workout at Snow Creek Athletic Center</li>
-		</ul>
-		<p><a href='#'><strong>4:45 pm:</strong></a>: Shuttle from the Village to Main Lodge.</p>
-		<br>
-		<p> <a href='#'><strong>5:00 pm:</strong></a> The Gondola Opens! Guests will be transported to our mid-mountain chalet by gondola from Main Lodge.</p> 
-		<br>
-		<p> <a href='#'><strong>5:30 pm:</strong></a> The Ceremony Begins: Weather permitting, Sarah and John will tie the knot outside on the sun deck at McCoy station. Please bring a jacket to stay warm. </p>
-		<br>
-		<p><strong><font color=#FF0000>Dress Code:</font></strong> Black Tie Invited. Please be conscious of weather, and stay warm!</p>
-		<br>
-		<p> <a href='#'><strong>6:00 pm:</strong></a> Cocktail Hour: Move inside to Parallax, and let the celebrations begin!</p>
-		<br>
-		<a href="images/CA_honeydrops.jpg" rel="prettyPhoto[gallery]" title="The California Honeydrops"><img src="images/CA_honeydrops - sm.jpg" alt="The California Honeydrops" title="The California Honeydrops" border="0" class="left_pic" /></a>
-		
-		<p> <a href='#'><strong>7:00 pm:</strong></a> Reception: Sarah and John have quite the party planned for you. They’re excited to welcome one of their favorite bands – <strong><a href="http://www.cahoneydrops.com/" target="_blank">The California Honeydrops!</a></strong> Get in the grove, and check out their tunes before you get to the mountain. </p>
-		<br>		
-		<p> <a href='#'><strong>11:30 pm:</strong></a> After Party at Parallax: You don’t have to go down the mountain yet! The DJ will be playing late, and we’ll dance the night away at 9,000ft.</p>
-	</div>
-	
-	<h1>Sunday: <span>Leave with Love</span></h1>
-	<div>
-		<h1>Sunday: <span>Brunch at the Sullivan’s House</span></h1>
-		<p> <a href='#'><strong>10:00am – 12:00pm:</strong></a> Katie and Dan will host a farewell brunch at their home in Mammoth. Come hungry and leave the newlyweds with a hug on your way out of town.</p> </strong>		
-		<br>
-		<p>36 Starwood Drive,</p>
-		<p>Mammoth Lakes, CA </p>
-		<p>Phone: (760) 934-4704</p>
-	
-    </div>
-	
-</div>	  
-		    
-        
-        <div class="divider"></div>
-            
-   </div>
-   
-   <div class="clear"></div> 
-   
-</div>
+             function handler() {
+               var prop,
+                 orig = event;
 
-</div>
-</div>
+               if ( ( Math.abs( previousX - currentX ) +
+                   Math.abs( previousY - currentY ) ) < 7 ) {
+                 clear();
 
-   
-   <div class="footer">
-       <div class="footer_content">
-       <div class="footer_text">
-       This website is a  <a href="#">John and Sarah Production</a> <br />
-       Photos by <a href="https://instagram.com/superjohn_ca" target="_blank">SuperJohn_CA</a>
-       </div>
-       <div class="footer_menu">
-           <ul>
-        	<li><a  href="index.html">Home</a></li>
-            <li><a class="selected" href="wedding_info.html">Schedule of Events</a></li>
-            <li><a href="destination.html">Travel & Lodging</a></li>
-			<li><a href="fullwidth.html">More Information</a></li>
-			<li><a href="gallery.html">Photo Album</a></li>
-            <li><a href="contact.html">Contact</a></li> 
-           <li><a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
-           </ul>
-       </div>
-       <div class="clear"></div>
-       </div>
-       
-	   <!-- Google Code for Remarketing Tag -->
-			<!--------------------------------------------------
-			Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
-			--------------------------------------------------->
-			<script type="text/javascript">
-			/* <![CDATA[ */
-			var google_conversion_id = 1017853366;
-			var google_custom_params = window.google_tag_params;
-			var google_remarketing_only = true;
-			/* ]]> */
-			</script>
-			<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-			</script>
-			<noscript>
-			<div style="display:inline;">
-			<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1017853366/?value=0&amp;guid=ON&amp;script=0"/>
-			</div>
-			</noscript>
-				<!--[ End Google Adwords ReMarketing Tags]-->
-	   
-   </div>
+                 event = $.Event( "hoverintent" );
+                 for ( prop in orig ) {
+                   if ( !( prop in event ) ) {
+                     event[ prop ] = orig[ prop ];
+                   }
+                 }
+                 // Prevent accessing the original event since the new event
+                 // is fired asynchronously and the old event is no longer
+                 // usable (#6028)
+                 delete event.originalEvent;
 
-<script type="text/javascript">
-var main_menu=new main_menu.dd("main_menu");
-main_menu.init("main_menu","menuhover");
-</script>
-</body>
+                 target.trigger( event );
+               } else {
+                 previousX = currentX;
+                 previousY = currentY;
+                 timeout = setTimeout( handler, 100 );
+               }
+             }
+
+             timeout = setTimeout( handler, 100 );
+             target.bind({
+               mousemove: track,
+               mouseout: clear
+             });
+           }
+         };
+      </script>
+      <!--Facebook Remarketing-->
+      <script>(function() {
+         var _fbq = window._fbq || (window._fbq = []);
+         if (!_fbq.loaded) {
+         var fbds = document.createElement('script');
+         fbds.async = true;
+         fbds.src = '//connect.facebook.net/en_US/fbds.js';
+         var s = document.getElementsByTagName('script')[0];
+         s.parentNode.insertBefore(fbds, s);
+         _fbq.loaded = true;
+         }
+         _fbq.push(['addPixelId', '473521516162587']);
+         })();
+         window._fbq = window._fbq || [];
+         window._fbq.push(['track', 'PixelInitialized', {}]);
+      </script>
+      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=473521516162587&amp;ev=PixelInitialized" /></noscript>
+      <!--End Facebook Remarketing-->
+   </head>
+   <body>
+      <div id="shadow_bg">
+         <div id="main_container">
+            <a class="show_menu" href="#">menu</a>
+            <a class="hide_menu" href="#">close menu</a>
+            <div class="menu">
+               <ul id="main_menu">
+                  <li><a  href="index.html">Home</a></li>
+                  <li><a class="selected" href="wedding_info.html">Schedule of Events</a></li>
+                  <li><a href="destination.html">Travel & Lodging</a></li>
+                  <li><a href="fullwidth.html">More Information</a></li>
+                  <li><a href="rsvp.html">RSVP</a></li>
+               </ul>
+            </div>
+            <div id="center_container">
+               <div id="header">
+                  <div class="title"><a href="wedding_info.html">Schedule of Events</a></div>
+                  <div class="description"><span class="swirl_left"><span class="swirl_right"> Thursday - Sunday, March 18th-20th, 2016</span></span></div>
+               </div>
+               <!-- End of Header-->
+               <div class="content">
+                  <div id="accordion">
+                     <h1>Thursday: <span>Arrive in Mammoth Lakes</span></h1>
+                     <div>
+                        <p><strong><a href='#'>Evening:</a> Arrive in Mammoth Lakes</strong></p>
+                        <br/>
+                        <p>We recommend that guests
+                           arrive in Mammoth on
+                           Thursday night, so you can acclimate to the elevation and participate in Friday’s fun events!
+                           The town of Mammoth Lakes is approximately 8,000 feet above sea level. For those of you who don’t know what this means – head over to our FAQ section. You’ll thank us later.
+                         </p>
+                        <br/>
+                        <p> <strong><a href='#'>6 - 8pm:</a> Welcome Cocktail Hour at the Westin Hotel</strong></p>
+                        <br/>
+                        <p>For anyone who does
+                           arrive early to
+                           town, Christine Houghton
+                           will be hosting a St. Patrick’s Day cocktail hour at the Westin Hotel. Sarah
+                           will soon be changing her Irish last name, so let’s raise our glasses to Sarah’s last few days as a
+                           Sullivan!
+			</p>
+			<br>
+			<p>Libations and appetizers will be served from 6-8pm. Attire is casual - please come as you are! The event is located in the Foxfir banquet room at the Westin Hotel. 
+                        <br>
+			<br/>
+                        <p><strong><a href='#'>6:00 pm:</a> Shuttle from San Francisco</strong></p>
+                        <br/>
+                        <p>For guests leaving
+                           from the
+                           San
+                           Francisco area, we may have a shuttle to help you brave the winding roads. For more information, see the
+                           shuttle section of the <a href="destination.html">Travel and Lodging page</a>. Please make sure to let
+                           us know if you think you may want to hitch a ride.
+                        </p>
+                     </div>
+                     <h1>Friday: <span>Snow Day & Octoberfest-themed Welcome Dinner</span></h1>
+                     <div>
+                        <h1>All Day:<a href="#"> Snow Day!!!</a></h1>
+                        <p><strong><a href="#">9:00am:</a> Boarders & Skiers Meetup at Main Lodge</strong></p>
+                        </br>
+                        <p>Let’s hit the slopes! John and Sarah love
+                           snowboarding, and they want to share California’s best snow with you. We’ll have a guided route with stops along the way that are suitable for both beginners and advanced skiers. Please RSVP when you get your official invitation, so we can look into discounted tickets.
+                        </p>
+                        <br>
+                        <p><strong><a href="#">10:00am:</a> Tube Park Mania</strong>
+                           <br/>
+                        <p>Don’t snowboard or ski? Have small kids? A group
+                           will be at the tube park sledding, making snow angels, and enjoying this winter
+                        wonderland. Learn more about Wooley's Tube Park <a
+                                href="http://www.mammothmountain.com/winter/things-to-do/winter-activities/woolly's-tube-park", target="_blank">here!</a>
+                        </p>
+                        <br>
+                        <p><strong><a href="#">12:00pm:</a> Lunch on Mammoth Mountain at Canyon Lodge</strong>
+                        </p>
+                        <br/>
+                        <p>Whether you’re
+                           snowboarding or not, we would love to see you for a mid-day bite to eat. Canyon Lodge is
+                           accessible from The Village via a free Gondola and DOES NOT require a lift ticket. This is a very casual affair and is just a chance for people to grab a quick bite together and share some laughs. 
+                        </p>
+                        <br>
+                        </p>
+                        <a href="http://www.mammothbrewingco.com/", target="_blank"><img
+                           src="images/my_photos/mammoth-brewing-company-logo.jpg" alt="mammoth brewing company logo"
+                           title="mammoth brewing company logo" border="0" class="left_pic" /></a>
+                        <h2><strong><a href="#">6:00 - 9:00pm:</a> Octoberfest-themed Welcome Dinner</strong></h2>
+                        <p><strong>Bring your Steins and break out your Lederhosen & Dirndls</strong> – Everyone is invited to a German Style
+                           reception
+                           at <a href="http://www.mammothbrewingco.com/" target="_blank">Mammoth Brewing Company</a>! Guests are encouraged to dress in traditional garb, as we make merry at this quintessential Mammoth beer hall.
+                        </p>
+                        <br/>
+                        <p><strong>Attire: </strong> Many of us will be in full Lederhosen & Dirndls, but feel free
+                           to come as you please.
+                        </p>
+			<ul>
+				<li>Walking distance from the Westin and The Village
+				<li>Parking on site
+				<li>Children Welcome
+			</ul>
+                     </div>
+                     <h1>Saturday: <span>Our Wonderous Winter Wedding</span></h1>
+                     <div>
+                        <p><strong>Morning & Afternoon: </strong></p>
+                        <br/>
+                        <p>Have a Great Day in Mammoth. While the wedding party is preparing for the big event, we hope you’ll enjoy
+                           some of Mammoth’s Best. Sarah and John’s Favorites Include
+                        </p>
+                        <ul>
+                           <li><a
+                                   href="https://www.thrillist.com/travel/nation/awesome-things-to-do-at-mammoth-lakes-right-now">Thrillest Magazine's 11 Awesome Things to do in Mammoth</a></li>
+                           <li>Hot Springs</li>
+                           <li>Cross Country Skiing or Snowshoeing at Tamarack</li>
+                           <li>Take a Scenic Gondola Ride to the top of Mammoth Mountain. The views are spectacular.</li>
+                           <li>Bowling and Indoor Golfing at Mammoth Activity Center</li>
+                           <li>Workout at Snow Creek Athletic Center</li>
+                        </ul>
+                        <p><a href='#'><strong><a href="#">4:30 pm:</a> Board Shuttle @ The Village</strong></a></p>
+                        <br/>
+                        <p>We request that guests take the bus up to the Main Lodge. Busses depart from the Westin at 4:10, 4:40, and 4:45. A bus will depart from the Shiloh Inn at 4pm. Ater arriving at the Main Lodge, guests will board the mountain gondola to McCoy Station, site of the wedding at 9,000 feet. Guests who board the 4:00 or 4:10 bus will have the opportunity to go to Mammoth Mountain Summit (11k') prior to the wedding (recommended). Busses will depart back down the hill every half hour beginning at 9:30pm and ending at 1am.</p>
+                        <br>
+                        <p><strong><a href='#'>4:45 pm:</a> The Gondola Opens!</strong></p>
+                        <br/>
+                        <p>Guests will be transported to our mid-mountain chalet by gondola from Main Lodge.</p>
+                        <br>
+                        <p><strong><a href='#'>5:30 pm: </a>The Ceremony Begins</strong> Weather permitting, Sarah and
+                           John will
+                           tie the knot outside on the sun deck at McCoy station. Please bring a jacket to stay warm.
+                        </p>
+                        <br>
+                        <img src="images/warren.png" alt="Warren Priskes Jazz Band" title="Warren Priskes Jazz Band" border="0"
+                           class="left_pic" width="190" height="190" />
+                        <br/>
+                        <h3> <a href='#'>6:00 pm: </a>Cocktail Hour @ Parallax with <a
+                           href="https://www.youtube.com/user/wpriske/videos", target="_blank">Warren Priske's Jazz
+                           Band</a>
+                        </h3>
+                        <h3> <a href='#'>7:00 pm: </a>Dinner at McCoy Station</h3>
+                        <h3> <a href='#'>9 pm - 1 am: </a>Late Night - Party at Parallax</h3>
+                        <p>Sarah and John have quite the party planned for you. We'll have a full bar and the party at McCoy
+                           Station will be going until 1am. When guests are ready to leave, we have a shuttle running every 15
+                           mins from Main Lodge to the Village.
+                        </p>
+                     </div>
+                     <h1>Sunday: <span>Leave with Love</span></h1>
+                     <div>
+                        <h1>Sunday: <span>Brunch at the Sullivan’s House</span></h1>
+                        <p> <a href='#'><strong>9:30am – 12:30pm:</strong></a> Katie and Dan will host a farewell brunch at their home in Mammoth. Come hungry and leave the newlyweds with a hug before they depart on their honeymoon.</p>
+                        </strong>
+                        <br>
+                        <p>36 Starwood Drive,</p>
+                        <p>Mammoth Lakes, CA </p>
+                        <p>Phone: (760) 934-4704</p>
+			<br>
+			<ul>
+				<li>Very limited parking
+				<li>Please use public transportation or cabs if possible
+				<li>Parking is only on one side of the street, to allow emergency vehicle access
+				<li>Children Welcome
+			</ul>
+                     </div>
+                  </div>
+                  <div class="divider"></div>
+               </div>
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <div class="footer_content">
+            <div class="footer_text">
+               This website is a  <a href="#">John and Sarah Production</a> <br />
+               Photos by <a href="https://instagram.com/superjohn_ca" target="_blank">SuperJohn_CA</a>
+            </div>
+            <div class="footer_menu">
+               <ul>
+                  <li><a  href="index.html">Home</a></li>
+                  <li><a class="selected" href="wedding_info.html">Schedule of Events</a></li>
+                  <li><a href="destination.html">Travel & Lodging</a></li>
+                  <li><a href="fullwidth.html">More Information</a></li>
+                  <li><a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
+               </ul>
+            </div>
+            <div class="clear"></div>
+         </div>
+         <!-- Google Code for Remarketing Tag -->
+         <!--------------------------------------------------
+            Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+            --------------------------------------------------->
+         <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1017853366;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+         </script>
+         <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+         <noscript>
+            <div style="display:inline;">
+               <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1017853366/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
+         </noscript>
+         <!--[ End Google Adwords ReMarketing Tags]-->
+      </div>
+      <script type="text/javascript">
+         var main_menu=new main_menu.dd("main_menu");
+         main_menu.init("main_menu","menuhover");
+      </script>
+   </body>
 </html>

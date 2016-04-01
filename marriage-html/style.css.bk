@@ -37,13 +37,9 @@ h1 span, h2 span, h3 span, h4 span{color:#e8a900;}
 
 /* Layout
 /*-----------------------------------------------------------------------------------*/
-.left_full {padding:40px 40px 0 40px; }  /* float:left; */
+.left_full {padding:40px 40px 0 40px; float:left;}
 .left14{ width:200px; float:left; padding:40px 0 0 40px;}
 .left13{ width:280px; float:left; padding:40px 0 0 40px;}
-.left13_2{ width:280px; float:left; padding:9px 9px 9px 9px; margin: 5px 5px 5px 5px; }
-.left13_2{border-style: solid; border-width: 1px }
-.left13_2 h2{color:#e8a900;font-family: 'Great Vibes', cursive;font-size:30px; padding:0 0 10px 0; margin:0px;}
-.left13 h2{color:#e8a900;font-family: 'Great Vibes', cursive;font-size:30px; padding:0 0 10px 0; margin:0px;}
 .left23{ width:600px; float:left; padding:40px 0 0 40px;}
 .left12{ width:440px; float:left; padding:40px 0 0 40px;}
 
@@ -140,11 +136,9 @@ html[xmlns] .slides {display: block;}
 .about_pic img{ width:135px; height:135px;border-radius:70px;-moz-border-radius:70px;-webkit-border-radius:70px;-khtml-border-radius:70px; margin:6px 0 0 6px;}
 .about_right{ width:270px; float:left; padding:0 0 0 20px;}
 .about_right h2{color:#e8a900;font-family: 'Great Vibes', cursive;font-size:30px; padding:0 0 10px 0; margin:0px;}
-.fancy_header h2{color:#e8a900;font-family: 'Great Vibes', cursive;font-size:30px; padding:0 0 10px 0; margin:0px;}
 a.more_about{ width:103px; height:41px; background:url(images/more_about_bg.png) no-repeat center; text-align:center; line-height:41px; float:right; display:block; margin:15px 0 0 0; color:#564926; text-shadow:1px 1px #f8d67f;}
 
-/* .section_home h2{ width:264px; height:38px; background:url(images/title_bg.gif) no-repeat center; line-height:38px; padding:0 0 0 15px; margin:0 0 25px 0;} */
-.section_home h2{color:#e8a900;font-family: 'Great Vibes', cursive;font-size:30px; padding:0 0 10px 0; margin:0px;}
+.section_home h2{ width:264px; height:38px; background:url(images/title_bg.gif) no-repeat center; line-height:38px; padding:0 0 0 15px; margin:0 0 25px 0;}
 .section_home h2 span{ color:#FFFFFF; text-shadow:1px 1px #b48a38;}
 .section_home img{ border:5px #e6e2d8 solid; margin:0 0 0 10px;}
 .section_home p{ padding:10px;}
@@ -418,4 +412,3 @@ label.error { width:100%; display: block; float: right; color: red; padding:5px 
 .footer_menu ul li a{ font-size:14px; margin:0 0 10px 10px; display:block; float:left; padding:5px 10px; }
 .footer_menu ul li.selected a{ font-size:14px; margin:0 0 10px 10px; display:block; float:left; padding:5px 10px;background-color:#ebc04f;}
 }
-

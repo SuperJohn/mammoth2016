@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<title>John & Sarah's Wedding Website</title>
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<!-- Twitter Feed -->
+<script src="js/twitter/jquery.tweet.js" charset="utf-8"></script>
+<!-- Flickr Feed -->
+<script src="js/jflickrfeed.min.js"></script>
+<!-- FlexSlider -->
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<!-- PrettyPhoto -->
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/custom.quicksand.js"></script>
+<!-- DropDownMenu -->
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" charset="utf-8">
+var $ = jQuery.noConflict();
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+          animation: "fade"
+    });
+
+	$(function() {
+		$('.show_menu').click(function(){
+				$('.menu').fadeIn();
+				$('.show_menu').fadeOut();
+				$('.hide_menu').fadeIn();
+		});
+		$('.hide_menu').click(function(){
+				$('.menu').fadeOut();
+				$('.show_menu').fadeIn();
+				$('.hide_menu').fadeOut();
+		});
+	});
+
+
+  });
+
+  jQuery(function($){
+	$(".tweet").tweet({
+	  modpath: 'js/twitter/',
+	  join_text: "auto",
+	  username: "famousthemes",
+	  count: 1,
+	  auto_join_text_default: "we said,",
+	  auto_join_text_ed: "we",
+	  auto_join_text_ing: "we were",
+	  auto_join_text_reply: "we replied",
+	  auto_join_text_url: "we were checking out",
+	  loading_text: "loading tweets..."
+	});
+	$('#basicuse').jflickrfeed({
+		limit: 6,
+		qstrings: {
+			id: '31408169@N04'
+		},
+		itemTemplate: '<li><a href="{{image_b}}"><img src="{{image_s}}" alt="{{title}}" /></a></li>'
+	});
+  });
+</script>
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63706444-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+<div id="shadow_bg">
+<div id="main_container">
+
+	<a class="show_menu" href="#">menu</a>
+    <a class="hide_menu" href="#">close menu</a>
+
+<div class="menu">
+        <ul id="main_menu">
+        	<li><a  href="index.html">Home</a></li>
+            <li><a href="schedule.html">Schedule of Events</a></li>
+            <li><a href="destination.html">Travel & Lodging</a></li>
+			<li><a href="fullwidth.html">More Information</a></li>
+			<li><a href="gallery.html">Photo Album</a></li>
+            <li><a class="selected" href="rsvp.html">RSVP</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+     </div>
+
+<div id="center_container">
+
+  <div id="header">
+
+     <div class="title"><a href="index.html">RSVP</a></div>
+     <div class="description"><span class="swirl_left"><span class="swirl_right"> Mammoth Mountain | March 19, 2016</span></span></div>
+
+  </div><!-- End of Header-->
+
+   <div class="content">
+        <div class="left23">
+
+			<div class="form_content">
+<!-- NEW FORM -->
+
+            <form id="form1" method="post" action="http://mammoth2016.com:8000/rsvp/add/">
+ 			<h3 class="form_subtitle">Will you be attending our Wondrous Winter Wedding?</h3>
+
+                    <div class="form_row_rsvp">
+                    <div class="checkbox_container"><input type="radio" tabindex="2" class="form_radio" name="attend"
+                            /></div>
+                        <span class="checkbox_value">Delightfully Accept</span>
+                    </div>
+                    <div class="form_row_rsvp">
+                    <div class="checkbox_container"><input type="radio" tabindex="3" class="form_radio"
+                                                           name="no_attend" /></div>
+                        <span class="checkbox_value">Declines with Regrets</span>
+                    </div>
+
+                <div class="form_row"><label>Your Name:</label>
+                        <input type="text" tabindex="1" class="form_input" name="name"/></div>
+
+                <div class="form_row">
+                    <label>Guest Names:</label>
+                    <input type="text" tabindex="4" class="form_input" name="guest_names" />
+                </div>
+
+                <h3 class="form_subtitle">Please choose your entree:</h3>
+
+                <div class="form_row_rsvp">
+                    <div class="form_row_rsvp">
+                    <div class="checkbox_container"><input type="radio" tabindex="2" class="form_radio" name="entree1"
+                            /></div>
+                        <span class="checkbox_value">Filet Mignon</span>
+                    </div>
+                    <div class="form_row_rsvp">
+                    <div class="checkbox_container"><input type="radio" tabindex="3" class="form_radio"
+                                                           name="entree2" /></div>
+                        <span class="checkbox_value">Salmon</span>
+                    </div>
+                    <div class="form_row_rsvp">
+                    <div class="checkbox_container"><input type="radio" tabindex="3" class="form_radio"
+                                                           name="entree3" /></div>
+                        <span class="checkbox_value">Vegetarian Curry</span>
+                    </div>
+                </div>
+
+                <div class="form_row"><label>Allergies?</label>
+                        <input type="text" tabindex="5" class="form_input" name="allergies"/></div>
+                <br>
+                <h3 class="form_subtitle">Please select any additional events you plan to attend while in Mammoth.
+                    <br><br>See our <a href="schedule.html" target="_blank">Schedules Page</a>  for more info.</h3>
+            	<div class="form_rsvp">
+                    <div class="form_row_rsvp">
+                    <div
+                            class="checkbox_container"><input type="checkbox" tabindex="7" class="form_checkbox"
+                                                              name='event1'/></div> <span
+                            class="checkbox_value">St Patrick's Day Happy Hour</span> <span
+                            class="date_value"> Thursday PM</span>
+                    </div>
+                    <div class="form_row_rsvp">
+                    <div class="checkbox_container"><input type="checkbox" tabindex="8" class="form_checkbox"
+                                                           name='event2'  /></div> <span class="checkbox_value">Group Skiing / lunch at Mammoth Mountain</span>  <span class="date_value"> Friday AM</span>
+					</div>
+					<div class="form_row_rsvp">
+                    <div
+                            class="checkbox_container"><input type="checkbox" tabindex="9" class="form_checkbox"
+                                                              name='event3' /></div> <span
+                            class="checkbox_value">Welcome Dinner at Mammoth Brewing Co</span>  <span
+                            class="date_value"> Friday PM</span>
+                    </div>
+					<div class="form_row_rsvp">
+                    <div
+                            class="checkbox_container"><input type="checkbox" tabindex="10" class="form_checkbox"
+                                                              name='event4' /></div> <span class="checkbox_value">Ceremony & Reception at Mammoth Mountain</span>  <span class="date_value"> Saturday PM</span>
+                    </div>
+                    <div class="form_row_rsvp">
+                    <div
+                            class="checkbox_container"><input type="checkbox" class="form_checkbox"  name='event5' /></div> <span class="checkbox_value">Farewell Brunch at the Sullivan's</span> <span class="date_value"> Sunday AM</span>
+                    </div>
+                </div>
+                <div class="form_row">
+                <label>Leave a note for the Bride & Groom:</label>
+                    <textarea class="form_textarea" name="comment"></textarea>
+                    </div>
+
+
+                <div class="form_row">
+                    <input type="submit" class="form_submit_contact" value="Add RSVP" />
+                    </div>
+            </form>
+
+<!-- END NEW FORM -->
+            </div>
+
+        </div>
+
+   		<div class="left13 sidebar">
+
+			<h2>Wedding Location</h2>
+            <div class="gmap"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=zTWEkE5bokz0.kdLYPRSXi7PM"
+                                      width="100%" height="300"></iframe></div>
+
+            <div class = gmap> <iframe
+  width="100%"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfYgeLqLsFIP3w8FYnqxC55awsOAQwqLU
+    &q=McCoy+Station,Mammoth+Lakes+CA" allowfullscreen>
+</iframe></div>
+
+            <h2>Some cool Mammoth Links</h2>
+			<ul>
+                <li><a href="#">See the scenic gondola</a></li>
+                <li><a href="#">Best Hikes around Mammoth</a></li>
+                <li><a href="#">Mammoth Restaurant Guide</a></li>
+                <li><a href="#">Video: Your Guide to Mammoth Lakes</a></li>
+                <li><a href="#">Map of Mammoth Area</a></li>
+            </ul>
+
+        </div>
+
+        <div class="clear"></div>
+
+   </div>
+
+   <div class="clear"></div>
+
+</div>
+
+</div>
+</div>
+
+
+   <div class="footer">
+       <div class="footer_content">
+       <div class="footer_text">
+       This website is a  <a href="#">John and Sarah Production</a> <br />
+       Photos by <a href="https://instagram.com/superjohn_ca" target="_blank">SuperJohn_CA</a>
+       </div>
+       <div class="footer_menu">
+           <ul>
+           <li class="selected"><a href="index.html">Home</a></li>
+           <li><a href="blog.html">Blog </a></li>
+           <li><a href="gallery.html">Photo Album </a></li>
+           <li><a href="rsvp.html">RSVP</a></li>
+           <li><a href="contact.html">Contact</a></li>
+           <li><a onclick="jQuery('html, body').animate( { scrollTop: 0 }, 'slow' );"  href="javascript:void(0);" class="gotop" title="Go on top">TOP</a> </li>
+           </ul>
+       </div>
+       <div class="clear"></div>
+       </div>
+
+	   <!-- Google Code for Remarketing Tag -->
+			<!--------------------------------------------------
+			Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+			--------------------------------------------------->
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			var google_conversion_id = 1017853366;
+			var google_custom_params = window.google_tag_params;
+			var google_remarketing_only = true;
+			/* ]]> */
+			</script>
+			<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+			</script>
+			<noscript>
+			<div style="display:inline;">
+			<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1017853366/?value=0&amp;guid=ON&amp;script=0"/>
+			</div>
+			</noscript>
+				<!--[ End Google Adwords ReMarketing Tags]-->
+
+   </div>
+
+<script type="text/javascript">
+var main_menu=new main_menu.dd("main_menu");
+main_menu.init("main_menu","menuhover");
+</script>
+</body>
+</html>
+
